@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Load Feather Icons (for location icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
         /* Base styles */
         body {
@@ -160,7 +162,7 @@
             <!-- 3 Pillars Section -->
             <div class="py-20 bg-gray-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Find Your Passion</h2>
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Your Mancora Adventure Awaits</h2> 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Surf -->
                         <div class="group rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -169,7 +171,7 @@
                                  alt="Surfer on a wave in Mancora" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
                                 <h3 class="text-2xl font-bold mb-2">Surf</h3>
-                                <p class="text-gray-600 mb-4">From beginner-friendly breaks to world-class point breaks, Mancora is a surfer's paradise. We offer lessons, rentals, and guiding.</p>
+                                <p class="text-gray-600 mb-4">Ride Mancora's legendary left-hand point breaks. From mellow beginner waves to peeling perfection, we offer lessons, rentals, and expert guiding.</p>
                                 <a href="#surf" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="surf">Learn More &rarr;</a>
                             </div>
                         </div>
@@ -180,7 +182,7 @@
                                  alt="Kitesurfer in the air at sunset" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
                                 <h3 class="text-2xl font-bold mb-2">Kitesurf</h3>
-                                <p class="text-gray-600 mb-4">With consistent winds and a wide-open bay, Mancora is one of the world's top kitesurfing destinations. IKO lessons available.</p>
+                                <p class="text-gray-600 mb-4">Harness the consistent winds of Mancora Bay, a world-class kitesurfing destination. IKO certified lessons and rentals available for all levels.</p>
                                 <a href="#kitesurf" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="kitesurf">Learn More &rarr;</a>
                             </div>
                         </div>
@@ -191,7 +193,7 @@
                                  alt="Yoga class in an open-air shala" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
                                 <h3 class="text-2xl font-bold mb-2">Yoga</h3>
-                                <p class="text-gray-600 mb-4">Connect your mind, body, and soul in our beautiful ocean-view yoga shala. Daily classes for all levels, from vinyasa to yin.</p>
+                                <p class="text-gray-600 mb-4">Connect body and soul in our serene, open-air shala overlooking the Pacific. Daily classes and space for your personal practice await.</p>
                                 <a href="#yoga" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="yoga">Learn More &rarr;</a>
                             </div>
                         </div>
@@ -199,14 +201,20 @@
                 </div>
             </div>
 
-            <!-- The Eco House Intro -->
-            <div class="py-20 bg-white"> 
+            <!-- The Eco House Intro - ADDED SUBTLE BG -->
+            <div class="py-20 bg-green-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full uppercase">Our Philosophy</span>
+                            <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full uppercase">
+                                <!-- Optional Leaf Icon -->
+                                <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M15.403 4.081A.75.75 0 0116 4.755v1.498c0 .543-.396.993-.923 1.116a13.314 13.314 0 01-8.154 0c-.527-.123-.923-.573-.923-1.116V4.755a.75.75 0 01.597-.73 13.52 13.52 0 019.806 0zM4.755 8.75A.75.75 0 014 8.153V6.655c.527-.123.923-.573.923-1.116V4.755a2.25 2.25 0 012.25-2.25 14.945 14.945 0 018.154 0A2.25 2.25 0 0117.5 4.755v.784c0 .543.396.993.923 1.116v1.498a.75.75 0 01-.75.75h-2.11a.75.75 0 01-.74-.694 11.83 11.83 0 00-6.202 0 .75.75 0 01-.74.694H4.755zM12 10a.75.75 0 00-.75.75v5.476a.75.75 0 01-1.38.311l-2.074-4.148a.75.75 0 10-1.332.665l2.457 4.914a2.25 2.25 0 004.17 0l2.457-4.914a.75.75 0 10-1.332-.665L12.75 16.226V10.75A.75.75 0 0012 10z" clip-rule="evenodd" />
+                                </svg>                                
+                                Our Philosophy
+                            </span>
                             <h2 class="text-3xl font-bold text-gray-900 mt-4 mb-4">More Than a Hotel. An Eco House.</h2>
-                            <p class="text-lg text-gray-600 mb-6">We built Eco House Mancora from the ground up with sustainability at our core. Our unique construction uses recycled and local materials, minimizing our impact and maximizing your connection with nature. We believe in conscious travel, where adventure and responsibility go hand-in-hand.</p>
+                            <p class="text-lg text-gray-600 mb-6">We built Eco House Mancora with sustainability at our core, creating a unique boutique experience. Our construction uses recycled and local materials, minimizing impact while maximizing your connection with nature. We believe in conscious travel, where adventure and responsibility go hand-in-hand.</p>
                             <a href="#sustainability" class="nav-link text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="sustainability">Discover Our Eco-Practices &rarr;</a>
                         </div>
                         <div class="rounded-lg shadow-xl overflow-hidden">
@@ -218,18 +226,89 @@
                 </div>
             </div>
 
-            <!-- Restaurant Teaser Section -->
-            <div class="py-20 bg-gray-50">
+            <!-- Featured Rooms Section -->
+            <div class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Your Coastal Sanctuary</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Featured Room 1 -->
+                        <div class="group rounded-lg shadow-lg overflow-hidden flex flex-col">
+                            <img src="https://placehold.co/800x600/0e7490/FFFFFF?text=Ocean+View+Suite" 
+                                 onerror="this.src='https://placehold.co/800x600/CCC/FFF?text=Room+1'"
+                                 alt="Ocean View Suite" class="w-full h-64 object-cover">
+                            <div class="p-6 bg-white flex-grow">
+                                <h3 class="text-2xl font-bold mb-2">Ocean View Suite</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">Wake up to panoramic Pacific views from your private balcony. King bed, ensuite, pure bliss.</p>
+                                <!-- Link to the main accommodation page -->
+                                <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Featured Room 2 -->
+                        <div class="group rounded-lg shadow-lg overflow-hidden flex flex-col">
+                            <img src="https://placehold.co/800x600/10b981/FFFFFF?text=Garden+Bungalow" 
+                                 onerror="this.src='https://placehold.co/800x600/CCC/FFF?text=Room+2'"
+                                 alt="Garden Bungalow" class="w-full h-64 object-cover">
+                            <div class="p-6 bg-white flex-grow">
+                                <h3 class="text-2xl font-bold mb-2">Garden Bungalow</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">Your private retreat nestled in our lush gardens. Queen bed, terrace, perfect tranquility.</p>
+                                <!-- Link to the main accommodation page -->
+                                <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                         <a href="#accommodation" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition duration-150 ease-in-out" data-page="accommodation">
+                             See All Accommodations
+                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Location Highlight Section -->
+            <div class="py-20 bg-gray-50 text-center">
+               <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                   <h2 class="text-3xl font-bold text-gray-900 mb-4">Perfectly Placed for Peace & Play</h2>
+                   <p class="text-lg text-gray-600 mb-10">
+                       Nestled in tranquil Las Pocitas, we offer a peaceful retreat just steps from the action.
+                   </p>
+                   <!-- Location Icons -->
+                   <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+                       <div class="flex flex-col items-center">
+                            <i data-feather="wind" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Wind for Kitesurf -->
+                            <h4 class="font-semibold text-gray-800">Kitesurf Spot</h4>
+                            <p class="text-gray-600">Right Out Front (10 steps!)</p>
+                       </div>
+                       <div class="flex flex-col items-center">
+                            <i data-feather="anchor" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Anchor (waves/surf) -->
+                            <h4 class="font-semibold text-gray-800">Main Surf Break</h4>
+                            <p class="text-gray-600">Easy 5-Min Walk</p>
+                       </div>
+                       <div class="flex flex-col items-center">
+                            <i data-feather="coffee" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Coffee for Cafes -->
+                            <h4 class="font-semibold text-gray-800">Mancora Town</h4>
+                            <p class="text-gray-600">Short Stroll to Cafes</p>
+                       </div>
+                   </div>
+                   <a href="#location" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out" data-page="location">
+                       Explore the Area
+                   </a>
+               </div>
+            </div>
+
+            <!-- Restaurant Teaser Section - MINIMIZED -->
+            <div class="py-20 bg-white"> <!-- Standard Background -->
                  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                         <div class="rounded-lg shadow-xl overflow-hidden md:order-2">
-                             <img src="https://placehold.co/600x500/d946ef/FFFFFF?text=Fresh+Local+Food" 
-                                  onerror="this.src='https://placehold.co/600x500/d946ef/FFF?text=Food+Teaser'"
-                                  alt="Delicious healthy food served at the restaurant" class="w-full h-full object-cover">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                         <div class="md:col-span-1 rounded-lg shadow-xl overflow-hidden"> <!-- Smaller Image -->
+                             <img src="https://placehold.co/600x400/d946ef/FFFFFF?text=Fresh+Local+Food" 
+                                  onerror="this.src='https://placehold.co/600x400/d946ef/FFF?text=Food+Teaser'"
+                                  alt="Delicious healthy food served at the restaurant" class="w-full h-full object-cover aspect-[3/2]">
                          </div>
-                         <div class="md:order-1">
-                             <h2 class="text-3xl font-bold text-gray-900 mb-4">Nourish Your Body</h2>
-                             <p class="text-lg text-gray-600 mb-6">Our renowned on-site restaurant focuses on fresh, local ingredients, blending Peruvian flavors with healthy international cuisine. Fuel your adventures with vibrant dishes and delicious cocktails.</p>
+                         <div class="md:col-span-2"> <!-- Text takes more space -->
+                             <h2 class="text-3xl font-bold text-gray-900 mb-4">Fresh & Local Dining On-Site</h2>
+                             <p class="text-lg text-gray-600 mb-6">
+                                 Fuel your adventures at Nourish, our renowned restaurant known for blending fresh Peruvian ingredients with healthy international flavors.
+                             </p>
                              <a href="#restaurant" class="nav-link text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="restaurant">Explore the Menu &rarr;</a>
                          </div>
                     </div>
@@ -237,9 +316,9 @@
             </div>
 
             <!-- Mini-Gallery Section -->
-            <div class="py-20 bg-white">
+            <div class="py-20 bg-gray-50"> <!-- Added slight bg for separation -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Experience the Vibe</h2>
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">A Glimpse of Your Sanctuary</h2>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <img src="https://placehold.co/600x450/D8DEE9/4C566A?text=Ambiance+1" 
                              onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
@@ -276,20 +355,7 @@
                 </div>
             </div>
 
-            <!-- Location Highlight -->
-             <div class="py-20 bg-gray-50 text-center">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Perfectly Located</h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Nestled in peaceful Las Pocitas, yet just a 5-minute walk to the main surf break and Mancora's vibrant cafes. The best of both worlds.
-                    </p>
-                    <a href="#location" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out" data-page="location">
-                        Explore the Area
-                    </a>
-                </div>
-             </div>
-
-             <!-- Dual Call to Action -->
+            <!-- Dual Call to Action - KEPT AT END -->
              <div class="py-20 bg-white text-center">
                  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                      <h2 class="text-3xl font-bold text-gray-900 mb-6">Ready for Your Escape?</h2>
@@ -1086,9 +1152,13 @@
 
             // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Initialize Feather Icons
+            feather.replace();
 
         });
     </script>
 
 </body>
 </html>
+
