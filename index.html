@@ -59,6 +59,23 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
+
+        /* Basic Testimonial Slider Styles */
+        .testimonial-slide {
+            display: none; /* Hide slides by default */
+            transition: opacity 0.5s ease-in-out;
+             position: absolute; /* Needed for positioning */
+             inset: 0; /* Make slides fill container */
+             padding-left: 1rem; /* Adjust padding if arrows overlap text */
+             padding-right: 1rem;
+             opacity: 0;
+        }
+        .testimonial-slide.active-slide {
+            display: block; /* Show active slide */
+            opacity: 1;
+             position: relative; /* Make active slide take space */
+        }
+
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -141,7 +158,7 @@
         <!--     HOME PAGE       -->
         <!-- =================== -->
         <section id="home" class="active"> <!-- NOTE: The `active` class makes this section visible on load -->
-            <!-- Hero Section -->
+            <!-- 1. Hero Section -->
             <div class="relative bg-gray-900 h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
                 <!-- Cloudinary Image URL -->
                 <img src="https://placehold.co/1600x900/000000/FFFFFF?text=Eco+House+Hero+Image+(Surf/Yoga/Kite)" 
@@ -159,10 +176,15 @@
             </div>
 
             <!-- This is the START of the content WITHIN the home section -->
-            <!-- 3 Pillars Section -->
+            <!-- 2. 3 Pillars Section -->
             <div class="py-20 bg-gray-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Your Mancora Adventure Awaits</h2> 
+                    <!-- UPDATED TITLE -->
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Stay, Play, Unwind: Your Mancora Escape</h2> 
+                    <!-- ADDED SUBTITLE -->
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
+                        Discover world-class surf, kitesurfing, and yoga from our unique boutique hotel.
+                    </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Surf -->
                         <div class="group rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -201,13 +223,12 @@
                 </div>
             </div>
 
-            <!-- The Eco House Intro - ADDED SUBTLE BG -->
+            <!-- 3. The Eco House Intro - ADDED SUBTLE BG -->
             <div class="py-20 bg-green-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full uppercase">
-                                <!-- Optional Leaf Icon -->
                                 <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                   <path fill-rule="evenodd" d="M15.403 4.081A.75.75 0 0116 4.755v1.498c0 .543-.396.993-.923 1.116a13.314 13.314 0 01-8.154 0c-.527-.123-.923-.573-.923-1.116V4.755a.75.75 0 01.597-.73 13.52 13.52 0 019.806 0zM4.755 8.75A.75.75 0 014 8.153V6.655c.527-.123.923-.573.923-1.116V4.755a2.25 2.25 0 012.25-2.25 14.945 14.945 0 018.154 0A2.25 2.25 0 0117.5 4.755v.784c0 .543.396.993.923 1.116v1.498a.75.75 0 01-.75.75h-2.11a.75.75 0 01-.74-.694 11.83 11.83 0 00-6.202 0 .75.75 0 01-.74.694H4.755zM12 10a.75.75 0 00-.75.75v5.476a.75.75 0 01-1.38.311l-2.074-4.148a.75.75 0 10-1.332.665l2.457 4.914a2.25 2.25 0 004.17 0l2.457-4.914a.75.75 0 10-1.332-.665L12.75 16.226V10.75A.75.75 0 0012 10z" clip-rule="evenodd" />
                                 </svg>                                
@@ -226,7 +247,7 @@
                 </div>
             </div>
 
-            <!-- Featured Rooms Section -->
+            <!-- 4. Featured Rooms Section -->
             <div class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Your Coastal Sanctuary</h2>
@@ -239,7 +260,6 @@
                             <div class="p-6 bg-white flex-grow">
                                 <h3 class="text-2xl font-bold mb-2">Ocean View Suite</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Wake up to panoramic Pacific views from your private balcony. King bed, ensuite, pure bliss.</p>
-                                <!-- Link to the main accommodation page -->
                                 <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
                             </div>
                         </div>
@@ -251,7 +271,6 @@
                             <div class="p-6 bg-white flex-grow">
                                 <h3 class="text-2xl font-bold mb-2">Garden Bungalow</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Your private retreat nestled in our lush gardens. Queen bed, terrace, perfect tranquility.</p>
-                                <!-- Link to the main accommodation page -->
                                 <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
                             </div>
                         </div>
@@ -264,7 +283,85 @@
                 </div>
             </div>
 
-            <!-- Enhanced Location Highlight Section -->
+             <!-- 5. Testimonial Slider - MOVED UP & STRUCTURED -->
+            <div class="py-20 bg-cyan-800 text-white overflow-hidden"> 
+                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+                    <h2 class="text-3xl font-bold mb-8">What Our Guests Say</h2>
+                    
+                    <div id="testimonial-slider" class="relative min-h-[150px] sm:min-h-[180px]"> <!-- Container for slides, adjusted min height -->
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active-slide"> 
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "An absolute paradise. I came for the surfing and was blown away by the hospitality, the incredible food, and the yoga classes at sunset. The 'Eco House' concept is real - you can feel the good energy. I'll be back every year!"
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - Alex R.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from California</span>
+                            </cite>
+                        </div>
+                         <!-- Slide 2 -->
+                        <div class="testimonial-slide">
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "Perfect spot for kitesurfing right out front! The staff are amazing, rooms are clean and beautiful. Loved the eco-friendly touches everywhere. Highly recommended."
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - Sarah K.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from Germany</span>
+                            </cite>
+                        </div>
+                         <!-- Slide 3 -->
+                        <div class="testimonial-slide">
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "The yoga shala is magical. Starting the day with sun salutations overlooking the ocean was unforgettable. So peaceful and rejuvenating."
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - Ben T.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from Canada</span>
+                            </cite>
+                        </div>
+                        <!-- Slide 4 -->
+                         <div class="testimonial-slide">
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "Incredible food at Nourish restaurant! Some of the best ceviche I had in Peru. Plus, the included breakfast was delicious and healthy every morning."
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - Maria G.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from Peru</span>
+                            </cite>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="testimonial-slide">
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "Loved the balance between being close to town but far enough for peace and quiet. The walk to the surf break is super easy. Great location!"
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - David L.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from Australia</span>
+                            </cite>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="testimonial-slide">
+                            <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
+                                "Beautifully designed hotel that truly cares about sustainability. You can feel the positive vibe. Friendly staff made us feel right at home."
+                            </blockquote>
+                            <cite class="block mt-6 text-lg font-medium">
+                                - Chloe P.
+                                <span class="block text-sm font-normal text-cyan-200">Guest from France</span>
+                            </cite>
+                        </div>
+                    </div>
+
+                    <!-- Slider Arrows -->
+                    <button id="prev-testimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> <!-- Added z-index -->
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-testimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> <!-- Added z-index -->
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Enhanced Location Highlight Section -->
             <div class="py-20 bg-gray-50 text-center">
                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Perfectly Placed for Peace & Play</h2>
@@ -295,7 +392,7 @@
                </div>
             </div>
 
-            <!-- Restaurant Teaser Section - MINIMIZED -->
+            <!-- 7. Restaurant Teaser Section - MINIMIZED -->
             <div class="py-20 bg-white"> <!-- Standard Background -->
                  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -315,11 +412,12 @@
                 </div>
             </div>
 
-            <!-- Mini-Gallery Section -->
-            <div class="py-20 bg-gray-50"> <!-- Added slight bg for separation -->
+            <!-- 8. Expanded Gallery Section -->
+            <div class="py-20 bg-gray-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">A Glimpse of Your Sanctuary</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Adjusted grid for more images -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"> <!-- Grid changed to 5 cols on large screens -->
                         <img src="https://placehold.co/600x450/D8DEE9/4C566A?text=Ambiance+1" 
                              onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
                              alt="Relaxing ambiance at Eco House Mancora" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
@@ -332,6 +430,25 @@
                         <img src="https://placehold.co/600x450/0891b2/FFFFFF?text=Surf+Lifestyle" 
                              onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
                              alt="Surfing lifestyle shot near Mancora" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Action" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Kitesurfing action shot" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/16a34a/FFFFFF?text=Yoga+Pose" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Yoga pose in the shala" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/d946ef/FFFFFF?text=Sunset+Cocktail" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Cocktail at sunset" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/f59e0b/FFFFFF?text=Room+Detail" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Detail shot of a room's decor" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <!-- Added 2 more images for 10 total -->
+                         <img src="https://placehold.co/600x450/3b82f6/FFFFFF?text=Pool+Area" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Pool area at Eco House" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/ef4444/FFFFFF?text=Mancora+Town" 
+                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
+                             alt="Vibrant street in Mancora town" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
                     </div>
                      <div class="text-center mt-8">
                          <a href="#gallery-page" class="nav-link inline-block text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="gallery-page">View Full Gallery &rarr;</a>
@@ -339,36 +456,32 @@
                 </div>
             </div>
 
-            <!-- Testimonials -->
-            <div class="py-20 bg-cyan-800 text-white"> 
-                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-3xl font-bold mb-8">What Our Guests Say</h2>
-                    <div class="relative">
-                        <blockquote class="text-2xl font-light italic leading-relaxed">
-                            "An absolute paradise. I came for the surfing and was blown away by the hospitality, the incredible food, and the yoga classes at sunset. The 'Eco House' concept is real - you can feel the good energy. I'll be back every year!"
-                        </blockquote>
-                        <cite class="block mt-6 text-lg font-medium">
-                            - Alex R.
-                            <span class="block text-sm font-normal text-cyan-200">Guest from California</span>
-                        </cite>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dual Call to Action - KEPT AT END -->
-             <div class="py-20 bg-white text-center">
-                 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Ready for Your Escape?</h2>
+            <!-- 9. Dual Call to Action - ENHANCED -->
+            <div class="relative py-24 bg-gray-800 text-center"> <!-- Changed BG, Added Padding -->
+                 <!-- Background Image Placeholder -->
+                 <img src="https://placehold.co/1600x500/000000/FFFFFF?text=Mancora+Sunset+View" 
+                      onerror="this.src='https://placehold.co/1600x500/333/FFF?text=CTA+Background'"
+                      alt="Sunset over the ocean in Mancora"
+                      class="absolute inset-0 w-full h-full object-cover opacity-40"> <!-- Adjusted Opacity -->
+                 
+                 <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                      <!-- New Title -->
+                     <h2 class="text-4xl font-bold text-white mb-4 hero-text-shadow">Your Mancora Adventure Starts Here</h2> 
+                      <!-- New Text -->
+                     <p class="text-xl text-cyan-100 mb-8 hero-text-shadow">
+                          Find your perfect eco-friendly room and start planning your surf, kite, or yoga journey on Peru's stunning coast. Our team is ready to help.
+                     </p>
                      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                         <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-transparent text-lg font-medium rounded-lg shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 transition duration-150 ease-in-out">
+                          <!-- Adjusted Button Styles -->
+                         <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-transparent text-lg font-medium rounded-lg shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 transition duration-150 ease-in-out">
                              Book Your Stay
                          </a>
-                         <a href="#contact" class="nav-link inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-gray-300 text-lg font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out" data-page="contact">
+                         <a href="#contact" class="nav-link inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-white text-lg font-medium rounded-lg shadow-sm text-white bg-black/20 hover:bg-black/40 transition duration-150 ease-in-out" data-page="contact">
                              Ask a Question
                          </a>
                      </div>
                  </div>
-             </div>
+            </div>
             <!-- This is the END of the content WITHIN the home section -->
         </section>
 
@@ -839,6 +952,7 @@
                     <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Gallery" class="rounded-lg shadow-md w-full">
                     <img src="https://placehold.co/600x400/d946ef/FFFFFF?text=Food+Gallery" class="rounded-lg shadow-md w-full">
                     <img src="https://placehold.co/600x800/ECEFF4/4C566A?text=Gallery+6" class="rounded-lg shadow-md w-full">
+                     <!-- Add 2-4 more placeholders if needed for the expanded gallery -->
                 </div>
             </div>
         </section>
@@ -1128,6 +1242,52 @@
             handleHashChange(); 
 
 
+             // --- Testimonial Slider Logic ---
+             const sliderContainer = document.getElementById('testimonial-slider'); // Use the container ID
+             if (sliderContainer) {
+                 const slides = sliderContainer.querySelectorAll('.testimonial-slide');
+                 const prevButton = document.getElementById('prev-testimonial');
+                 const nextButton = document.getElementById('next-testimonial');
+                 let currentSlide = 0;
+
+                 function showSlide(index) {
+                     slides.forEach((slide, i) => {
+                         if (i === index) {
+                             slide.classList.add('active-slide');
+                         } else {
+                             slide.classList.remove('active-slide');
+                         }
+                     });
+                 }
+
+
+                 function nextSlide() {
+                     currentSlide = (currentSlide + 1) % slides.length;
+                     showSlide(currentSlide);
+                 }
+
+                 function prevSlide() {
+                     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                     showSlide(currentSlide);
+                 }
+
+                 // Check specifically if the buttons exist before adding listeners
+                 if (prevButton && nextButton && slides.length > 0) { 
+                     prevButton.addEventListener('click', prevSlide);
+                     nextButton.addEventListener('click', nextSlide);
+                     showSlide(currentSlide); // Show the first slide initially
+                 } else {
+                      // Only log error if elements are expected but not found
+                      if (!prevButton || !nextButton) {
+                        console.error("Testimonial slider buttons not found. Check HTML IDs: prev-testimonial, next-testimonial");
+                      }
+                      if (slides.length === 0) {
+                         console.warn("No testimonial slides found within #testimonial-slider");
+                      }
+                 }
+             }
+
+
             // --- Netlify Form Logic ---
             const netlifyForm = document.querySelector('form[data-netlify="true"]');
             if (netlifyForm) {
@@ -1146,15 +1306,28 @@
                          errorMsg.textContent = 'Oops! Something went wrong. Please try again.';
                          errorMsg.className = 'text-red-500 text-sm mt-2';
                          netlifyForm.appendChild(errorMsg);
+                         console.error('Form submission error:', error); // Log error
                      });
                  });
             }
 
             // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+            const currentYearSpan = document.getElementById('current-year');
+            if(currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
             
             // Initialize Feather Icons
-            feather.replace();
+            try {
+                // Check if feather is defined before calling replace
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                } else {
+                    console.error("Feather icons library not loaded.");
+                }
+            } catch (e) {
+                console.error("Feather icons failed to initialize:", e);
+            }
 
         });
     </script>
