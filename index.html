@@ -135,6 +135,7 @@
                         <a href="#location" class="nav-link text-gray-600 hover:text-cyan-700 px-3 py-2 rounded-md text-sm font-medium" data-page="location">Location</a>
                         <a href="#contact" class="nav-link text-gray-600 hover:text-cyan-700 px-3 py-2 rounded-md text-sm font-medium" data-page="contact">Contact</a>
                         <!-- Removed Gallery Link -->
+                        <!-- Removed Sustainability Link -->
                     </div>
 
                     <!-- Book Now (Desktop) - Updated rounded corner -->
@@ -171,6 +172,7 @@
                     <a href="#location" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-700 hover:bg-gray-50" data-page="location">Location</a>
                     <a href="#contact" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-700 hover:bg-gray-50" data-page="contact">Contact</a>
                     <!-- Removed Gallery Link -->
+                    <!-- Removed Sustainability Link -->
                 </div>
                 <!-- Book Now (Mobile) - Updated rounded corner -->
                 <div class="px-5 py-6">
@@ -270,15 +272,16 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <span class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full uppercase">
-                                <svg class="w-4 h-4 mr-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd" d="M15.403 4.081A.75.75 0 0116 4.755v1.498c0 .543-.396.993-.923 1.116a13.314 13.314 0 01-8.154 0c-.527-.123-.923-.573-.923-1.116V4.755a.75.75 0 01.597-.73 13.52 13.52 0 019.806 0zM4.755 8.75A.75.75 0 014 8.153V6.655c.527-.123.923-.573.923-1.116V4.755a2.25 2.25 0 012.25-2.25 14.945 14.945 0 018.154 0A2.25 2.25 0 0117.5 4.755v.784c0 .543.396.993.923 1.116v1.498a.75.75 0 01-.75.75h-2.11a.75.75 0 01-.74-.694 11.83 11.83 0 00-6.202 0 .75.75 0 01-.74.694H4.755zM12 10a.75.75 0 00-.75.75v5.476a.75.75 0 01-1.38.311l-2.074-4.148a.75.75 0 10-1.332.665l2.457 4.914a2.25 2.25 0 004.17 0l2.457-4.914a.75.75 0 10-1.332-.665L12.75 16.226V10.75A.75.75 0 0012 10z" clip-rule="evenodd" />
-                                </svg>                                
+                                <i data-feather="leaf" class="w-4 h-4 mr-1.5"></i>                             
                                 Our Philosophy
                             </span>
                             <!-- Heading uses Poppins Bold -->
                             <h2 class="text-3xl font-bold text-gray-900 mt-4 mb-4">More Than a Hotel. An Eco House.</h2>
-                            <p class="text-lg text-gray-600 mb-6">We built Eco House Mancora with sustainability at our core, creating a unique boutique experience. Our construction uses recycled and local materials, minimizing impact while maximizing your connection with nature. We believe in conscious travel, where adventure and responsibility go hand-in-hand.</p>
+                            <p class="text-lg text-gray-600 mb-6">We built Eco House Mancora with sustainability at our core. Our construction uses recycled and local materials, minimizing impact while maximizing your connection with nature. We believe in conscious travel, where adventure and responsibility go hand-in-hand.</p>
+                            <!-- Link Removed: No longer points to a separate page
                             <a href="#sustainability" class="nav-link text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="sustainability">Discover Our Eco-Practices &rarr;</a>
+                             -->
+                             <p class="text-lg text-gray-600">Learn more about our commitment on the <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">Accommodation</a> page.</p>
                         </div>
                          <!-- Updated rounded corner, added loading="lazy" -->
                         <div class="rounded-xl shadow-xl overflow-hidden">
@@ -697,6 +700,44 @@
                          </div>
                      </div>
 
+                    <!-- START: Our Eco Commitment Section -->
+                    <div class="my-20 py-20 bg-green-50 rounded-xl shadow-lg">
+                        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Eco Commitment</h2>
+                            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+                                "Eco House" is our promise. We're committed to sustainable tourism that respects our environment and supports our local community, ensuring your stay is both comfortable and conscious.
+                            </p>
+                            <!-- Core Pillars -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                <div>
+                                    <i data-feather="home" class="w-10 h-10 text-green-600 mx-auto mb-3"></i>
+                                    <h3 class="text-xl font-semibold mb-2">Eco-Construction</h3>
+                                    <p class="text-gray-600 text-sm">Buildings made from local wood, bamboo, and recycled materials, designed for natural airflow.</p>
+                                </div>
+                                <div>
+                                     <i data-feather="droplet" class="w-10 h-10 text-blue-500 mx-auto mb-3"></i>
+                                    <h3 class="text-xl font-semibold mb-2">Water Conservation</h3>
+                                    <p class="text-gray-600 text-sm">100% greywater treatment for garden irrigation and low-flow fixtures throughout.</p>
+                                </div>
+                                <div>
+                                     <i data-feather="sun" class="w-10 h-10 text-yellow-500 mx-auto mb-3"></i>
+                                    <h3 class="text-xl font-semibold mb-2">Renewable Energy</h3>
+                                    <p class="text-gray-600 text-sm">Solar water heating, LED lighting, and energy-efficient appliances minimize our footprint.</p>
+                                </div>
+                            </div>
+                             <!-- Key Practices -->
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Key Practices</h3>
+                             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-700">
+                                <span class="flex items-center"><i data-feather="check-circle" class="w-4 h-4 text-green-500 mr-1.5"></i>Zero Single-Use Plastic</span>
+                                <span class="flex items-center"><i data-feather="check-circle" class="w-4 h-4 text-green-500 mr-1.5"></i>Recycling & Composting</span>
+                                <span class="flex items-center"><i data-feather="check-circle" class="w-4 h-4 text-green-500 mr-1.5"></i>Locally Sourced Food</span>
+                                <span class="flex items-center"><i data-feather="check-circle" class="w-4 h-4 text-green-500 mr-1.5"></i>Hiring Local Staff</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Our Eco Commitment Section -->
+
+
                     <!-- START: Testimonials Section -->
                     <div id="accommodation-testimonials" class="py-20 bg-cyan-50 rounded-xl my-20">
                         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -859,57 +900,155 @@
             <!-- Page Content -->
             <div class="py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Mancora is a world-renowned kitesurfing spot, thanks to our consistent thermal winds and warm waters. Come see why kiters return here year after year.</p>
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Mancora is a world-renowned kitesurfing spot, thanks to our consistent thermal winds and warm waters. Come see why kiters return here year after year, right from our doorstep.</p>
 
-                    <!-- Lessons - Updated rounded corner -->
+                    <!-- Enhanced Lessons Section -->
                     <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                         <div class="md:w-1/2">
                               <!-- Added loading="lazy" -->
-                             <img src="https://placehold.co/800x600/db2777/FFFFFF?text=Kitesurf+Lesson" 
+                             <img src="https://placehold.co/800x600/db2777/FFFFFF?text=Kitesurf+Lesson+in+Mancora" 
                                   loading="lazy"
                                   onerror="this.src='https://placehold.co/800x600/db2777/FFF?text=Kite+Lesson'"
                                   alt="Kitesurf lesson in the water" class="w-full h-80 md:h-full object-cover">
                         </div>
                         <div class="md:w-1/2 p-8 md:p-12">
                              <!-- Heading uses Poppins Bold -->
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">IKO Certified Lessons</h3>
-                            <p class="text-gray-600 mb-6">Our kite school is IKO certified, ensuring the highest standards of safety and teaching quality. We offer courses for all levels.</p>
-                            <ul class="space-y-3 mb-8 text-gray-700">
-                                <li><strong class="font-medium text-gray-900">Discovery (3 Hours):</strong> Learn the basics, safety, and fly a trainer kite on the beach.</li>
-                                <li><strong class="font-medium text-gray-900">Full Course (9 Hours):</strong> Get in the water! This course will take you from body-dragging to your first water starts.</li>
-                                <li><strong class="font-medium text-gray-900">Advanced Coaching:</strong> Perfect your transitions, learn to jump, or dial in your unhooked tricks.</li>
-                            </ul>
-                             <p class="text-sm text-gray-500 italic">IKO courses available as add-ons when booking your stay.</p>
-                             <!-- Optional Link to external Kite Site -->
-                             <!-- <a href="your-kite-site-url" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-cyan-700 hover:text-cyan-900">Visit our dedicated Kite Site &rarr;</a> -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Top Quality IKO Lessons</h3>
+                            <p class="text-gray-600 mb-6">Learn or progress safely with our partners at Wild Kitesurf Peru, the **only IKO Certified Center in Northern Peru**, operating directly from Eco House. Benefit from:</p>
+                            <!-- Selling Points -->
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-2 mb-6 text-sm text-gray-700">
+                                <span class="flex items-center"><i data-feather="award" class="w-4 h-4 text-cyan-600 mr-1.5"></i>IKO Certification</span>
+                                <span class="flex items-center"><i data-feather="users" class="w-4 h-4 text-cyan-600 mr-1.5"></i>Multilingual Coaches</span>
+                                <span class="flex items-center"><i data-feather="tool" class="w-4 h-4 text-cyan-600 mr-1.5"></i>Latest Duotone Gear</span>
+                                <span class="flex items-center"><i data-feather="radio" class="w-4 h-4 text-cyan-600 mr-1.5"></i>Walkie-Talkie Option</span>
+                                <span class="flex items-center"><i data-feather="life-buoy" class="w-4 h-4 text-cyan-600 mr-1.5"></i>Safety Boat Support</span>
+                                <span class="flex items-center"><i data-feather="star" class="w-4 h-4 text-cyan-600 mr-1.5"></i>Top TripAdvisor Rating</span>
+                            </div>
+                            <!-- Course Levels -->
+                            <p class="text-gray-600 mb-6">Courses available for all levels, from your first Discovery flight to advanced coaching.</p>
+                             <p class="text-sm text-gray-500 italic">Lessons available as add-ons when booking your stay.</p>
                         </div>
                     </div>
+
+                    <!-- START: Combine Your Stay Section -->
+                    <div class="my-20 py-20 bg-gradient-to-r from-cyan-50 to-blue-100 rounded-xl shadow-lg">
+                        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                             <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Combine Your Stay: Kite Camps & Packages</h2>
+                             <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                                 Immerse yourself fully! Combine your comfortable stay at Eco House with kitesurfing and other activities for the ultimate Mancora experience. Here are some popular options:
+                             </p>
+                             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <!-- Kite & Stay -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                                    <img src="https://placehold.co/100x100/fecaca/991b1b?text=Kite+B%26B" alt="Kite & Stay Icon" class="w-20 h-20 mb-4 rounded-full">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Kite & Stay</h3>
+                                    <p class="text-gray-600 text-sm flex-grow">Your perfect basecamp. Enjoy our charming Eco-Boutique rooms and hit the water for kitesurfing right out front.</p>
+                                </div>
+                                 <!-- Kite & Yoga -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                                    <img src="https://placehold.co/100x100/d1fae5/065f46?text=Holistic" alt="Kite & Yoga Icon" class="w-20 h-20 mb-4 rounded-full">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Kite & Yoga</h3>
+                                    <p class="text-gray-600 text-sm flex-grow">Find your balance. Combine energizing kite sessions with restorative yoga classes in our ocean-view shala.</p>
+                                </div>
+                                 <!-- Surf & Kite -->
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                                    <img src="https://placehold.co/100x100/bfdbfe/1e40af?text=Surfistic" alt="Surf & Kite Icon" class="w-20 h-20 mb-4 rounded-full">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Surf & Kite</h3>
+                                    <p class="text-gray-600 text-sm flex-grow">The ultimate waterman's dream. Catch waves in the morning calma and ride the wind in the afternoon breeze.</p>
+                                </div>
+                            </div>
+                            <p class="text-center text-gray-600 mt-8 text-sm italic">These and other packages can be customized and added when booking your stay.</p>
+                        </div>
+                    </div>
+                     <!-- END: Combine Your Stay Section -->
+
+                    <!-- START: Beyond the Basics Section -->
+                     <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/f97316/FFFFFF?text=Wave+Kitesurfing" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/f97316/FFF?text=Wave+Kite'"
+                                  alt="Kitesurfer riding a wave" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Beyond the Basics: Wave Riding</h3>
+                            <p class="text-gray-600 mb-6">Ready to take your riding into the waves? Mancora offers fantastic conditions for learning and progressing in wave kitesurfing.</p>
+                            <ul class="space-y-3 mb-6 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">Specialized Coaching:</strong> Focused sessions on wave technique, transitions, and strapless riding.</li>
+                                <li><strong class="font-medium text-gray-900">Kitesurf Wave Camps:</strong> Immerse yourself in a multi-day camp hosted right here at Eco House, designed for dedicated wave skill progression with video analysis and expert guidance.</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 italic">Wave coaching and camps can be booked in advance or upon arrival.</p>
+                        </div>
+                    </div>
+                    <!-- END: Beyond the Basics Section -->
+
+                     <!-- START: Excursions Section -->
+                     <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/0ea5e9/FFFFFF?text=Kite+Downwinder+Trip" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/0ea5e9/FFF?text=Kite+Trip'"
+                                  alt="Group of kitesurfers on a downwinder" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Explore Peru's Coast</h3>
+                            <p class="text-gray-600 mb-6">Discover more of Peru's legendary coastline with guided kitesurf adventures organized by Wild Kitesurf Peru.</p>
+                            <ul class="space-y-3 mb-6 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">Downwinders:</strong> Experience the thrill of riding downwind along stunning stretches of coast with vehicle support.</li>
+                                <li><strong class="font-medium text-gray-900">Kite Trips:</strong> Guided excursions to famous nearby wave spots like Lobitos or Cabo Blanco, tailored to conditions and your level.</li>
+                                <li><strong class="font-medium text-gray-900">Local Expertise:</strong> Benefit from the knowledge of local guides who know the conditions and spots inside out.</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 italic">Inquire about trips and downwinders when booking or during your stay.</p>
+                        </div>
+                    </div>
+                    <!-- END: Excursions Section -->
                     
-                    <!-- The Spot - Updated rounded corner -->
-                    <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12">
+                    <!-- The Spot Section - Slightly Enhanced -->
+                    <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12 mb-12">
                          <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-center mb-8">The Spot: Conditions & Rentals</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                             <div>
-                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                                <i data-feather="wind" class="w-12 h-12 text-cyan-400 mx-auto mb-4"></i>
                                  <!-- Heading uses Poppins SemiBold -->
                                 <h4 class="text-2xl font-semibold mb-2">The Wind</h4>
                                 <p class="text-gray-300">Consistent side-onshore thermal winds. Best season is April to December. Average 18-25 knots, perfect for 7m-10m kites.</p>
                             </div>
                             <div>
-                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM20 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"></path></svg>
+                                <i data-feather="droplet" class="w-12 h-12 text-cyan-400 mx-auto mb-4"></i>
                                  <!-- Heading uses Poppins SemiBold -->
                                 <h4 class="text-2xl font-semibold mb-2">The Water</h4>
                                 <p class="text-gray-300">Warm water all year - no wetsuit needed! A mix of flat water inside the reef and fun waves further out. Wide, sandy beach for setup.</p>
                             </div>
                             <div>
-                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"></path><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                <i data-feather="tool" class="w-12 h-12 text-cyan-400 mx-auto mb-4"></i>
                                  <!-- Heading uses Poppins SemiBold -->
                                 <h4 class="text-2xl font-semibold mb-2">Gear & Storage</h4>
-                                <p class="text-gray-300">We rent the latest Duotone & Core kites and boards. Secure storage available. Gear rental can be added when booking.</p>
+                                <p class="text-gray-300">High-quality Duotone & Core kites/boards available for rent directly on-site. Secure storage also available. Gear rental can be added when booking your stay.</p> <!-- Enhanced Text -->
                             </div>
                         </div>
                     </div>
+
+                    <!-- START: Call to Action Section (Refined) -->
+                     <div class="bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl shadow-xl p-8 md:p-12 text-center">
+                         <h2 class="text-3xl font-bold mb-4">Ready to Ride? Learn More & Book</h2>
+                         <p class="text-lg max-w-2xl mx-auto mb-6">
+                            All kitesurf lessons, coaching, camps, and trips are expertly managed by our partners at Wild Kitesurf Peru, operating directly from Eco House Mancora.
+                         </p>
+                         <p class="text-lg max-w-2xl mx-auto mb-8">
+                             You can easily add kitesurf lessons, gear rental, and combined packages (like Kite & Stay, Kite & Yoga, Surf & Kite) as optional extras when booking your stay online. Alternatively, arrange your activities upon arrival or <a href="#contact" class="nav-link font-semibold underline hover:text-cyan-200" data-page="contact">contact us</a> directly with any questions.
+                         </p>
+                         <a href="https://wild-kitesurf-peru.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-purple-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
+                              Explore All Kite Options on Wild Kitesurf Peru 
+                              <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
+                         </a>
+                     </div>
+                    <!-- END: Call to Action Section -->
+
                 </div>
             </div>
         </section>
@@ -985,75 +1124,10 @@
             </div>
         </section>
 
-        <!-- =================== -->
-        <!-- SUSTAINABILITY (ECO HOUSE) PAGE -->
-        <!-- =================== -->
-        <section id="sustainability" class="bg-white">
-            <!-- Page Banner -->
-            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
-                <img src="https://placehold.co/1600x400/14b8a6/FFFFFF?text=Sustainability" 
-                     loading="lazy"
-                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
-                     alt="Eco-friendly building materials" 
-                     class="absolute inset-0 w-full h-full object-cover opacity-50">
-                <div class="relative z-10 p-4">
-                    <!-- Heading uses Poppins Black -->
-                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
-                        The Eco House Philosophy
-                    </h2>
-                </div>
-            </div>
-
-            <!-- Page Content -->
-            <div class="py-20">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">"Eco House" isn't just a name—it's our promise. We are committed to sustainable tourism that respects our beautiful environment and supports our local community.</p>
-
-                      <!-- Updated rounded corner, added loading="lazy" -->
-                     <img src="https://placehold.co/1200x600/14b8a6/FFFFFF?text=Sustainable+Practices" 
-                          loading="lazy"
-                          onerror="this.src='https://placehold.co/1200x600/14b8a6/FFF?text=Eco+Practices'"
-                          alt="Visual representation of sustainability efforts" class="w-full h-auto object-cover rounded-xl shadow-lg mb-12">
-
-                    <!-- Core Pillars -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
-                        <div>
-                            <svg class="w-12 h-12 text-green-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-2xl font-semibold mb-2">Eco-Construction</h3>
-                            <p class="text-gray-600">Our buildings are made from locally sourced wood, bamboo, and recycled materials. The design promotes natural airflow, reducing the need for A/C.</p>
-                        </div>
-                        <div>
-                            <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 7.4 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM12.56 12.03c.18-.6.4-1.17.65-1.74A4.25 4.25 0 0 1 15.6 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="M11 20.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 11.4 13.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM17.56 16.03c.18-.6.4-1.17.65-1.74a4.25 4.25 0 0 1 2.4-1.2c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="m14 3 1.1 2.3c.1.2.3.4.5.5L18 7l-2.3 1.1c-.2.1-.4.3-.5.5L14 11l-1.1-2.3c-.1-.2-.3-.4-.5-.5L10 7l2.3-1.1c.2-.1.4-.3.5-.5L14 3z"></path></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-2xl font-semibold mb-2">Water Conservation</h3>
-                            <p class="text-gray-600">We capture and treat 100% of our greywater, which is then used to irrigate our lush tropical gardens. All fixtures are low-flow to reduce waste.</p>
-                        </div>
-                        <div>
-                            <svg class="w-12 h-12 text-yellow-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-2xl font-semibold mb-2">Renewable Energy</h3>
-                            <p class="text-gray-600">Solar panels heat all of our water, and we utilize LED lighting and energy-efficient appliances throughout the property to minimize our footprint.</p>
-                        </div>
-                    </div>
-
-                    <!-- Our Practices - Updated rounded corner -->
-                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Practices & Community</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Zero Single-Use Plastic Policy</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Comprehensive Recycling & Composting</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Locally Sourced Food for our Restaurant</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Hiring 100% Local Staff</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Eco-Friendly Cleaning Products</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Supporting Local Artisans & Businesses</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- ======================================== -->
+        <!-- REMOVED: SUSTAINABILITY (ECO HOUSE) PAGE -->
+        <!-- ======================================== -->
+       
         <!-- =================== -->
         <!-- RESTAURANT PAGE -->
         <!-- =================== -->
@@ -1285,7 +1359,7 @@
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#accommodation" class="nav-link text-sm hover:text-white" data-page="accommodation">Accommodation</a></li>
-                        <li><a href="#sustainability" class="nav-link text-sm hover:text-white" data-page="sustainability">The Eco House</a></li>
+                        <li><a href="#restaurant" class="nav-link text-sm hover:text-white" data-page="restaurant">Restaurant</a></li> <!-- Updated Link -->
                         <li><a href="#location" class="nav-link text-sm hover:text-white" data-page="location">Location</a></li>
                     </ul>
                 </div>
