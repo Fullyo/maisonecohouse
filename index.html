@@ -95,6 +95,17 @@
              position: relative; /* Make active slide take space */
         }
 
+        /* Specific styles for Accommodation Testimonials */
+        #accommodation-testimonials blockquote::before {
+             content: '\201C'; /* Left double quotation mark */
+             font-size: 4rem;
+             color: #a5f3fc; /* Light cyan */
+             position: absolute;
+             left: -0.5rem;
+             top: -1.5rem;
+             line-height: 1;
+        }
+
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -538,10 +549,50 @@
                 </div>
             </div>
 
-            <!-- Page Content -->
+            <!-- Page Content Wrapper -->
             <div class="py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Intro Text -->
                     <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Each of our spaces is designed with natural materials, comfort, and tranquility in mind. Find the perfect room for your stay.</p>
+                    
+                    <!-- START: Why Stay Snippet -->
+                    <div class="mb-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                        <div class="flex flex-col items-center">
+                            <i data-feather="sun" class="w-10 h-10 text-amber-500 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Oceanfront Bliss</h4>
+                            <p class="text-gray-600 text-sm">Wake up to sea breezes and stunning Pacific views.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i data-feather="leaf" class="w-10 h-10 text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Eco-Conscious Comfort</h4>
+                            <p class="text-gray-600 text-sm">Relax in rooms built with sustainable, natural materials.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <i data-feather="coffee" class="w-10 h-10 text-cyan-700 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">Steps from Adventure</h4>
+                            <p class="text-gray-600 text-sm">Easy access to surf, kite spots, and Mancora town.</p>
+                        </div>
+                    </div>
+                    <!-- END: Why Stay Snippet -->
+
+                    <!-- START: Common Amenities Section -->
+                    <div class="mb-20 bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
+                        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Amenities For All Guests</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-4 text-gray-700 max-w-4xl mx-auto">
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Pool & Gardens Access</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Free Daily Breakfast</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> High-Speed Wi-Fi</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Yoga Shala Access</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> On-site Restaurant & Bar</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Secure Board Storage</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Daily Housekeeping</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Local Staff Assistance</p>
+                        </div>
+                    </div>
+                    <!-- END: Common Amenities Section -->
+
+                    <!-- Room Listings Section Title -->
+                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Rooms & Spaces</h2>
 
                     <!-- Room 1: Ocean View Suite - Updated rounded corner -->
                     <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
@@ -557,10 +608,10 @@
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">Ocean View Suite</h3>
                             <p class="text-gray-600 mb-6">Wake up to the sound of the waves. Our spacious Ocean View Suites feature a private king bed, an en-suite bathroom, and a private balcony with panoramic views of the Pacific. The ultimate in comfort and style.</p>
                             <ul class="space-y-2 mb-8 text-gray-700">
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (King Bed)</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Balcony & Hammock</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Air Conditioning</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                                <li class="flex items-center"><i data-feather="users" class="w-5 h-5 text-cyan-700 mr-2"></i>Sleeps 2 (King Bed)</li>
+                                <li class="flex items-center"><i data-feather="eye" class="w-5 h-5 text-cyan-700 mr-2"></i>Private Balcony & Hammock</li>
+                                <li class="flex items-center"><i data-feather="thermometer" class="w-5 h-5 text-cyan-700 mr-2"></i>Air Conditioning</li>
+                                <li class="flex items-center"><i data-feather="gift" class="w-5 h-5 text-cyan-700 mr-2"></i>Eco-Friendly Toiletries</li>
                             </ul>
                              <!-- Updated rounded corner -->
                             <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
@@ -583,10 +634,10 @@
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">Garden Bungalow</h3>
                             <p class="text-gray-600 mb-6">Tucked away in our lush tropical gardens, the Garden Bungalows offer a peaceful and private retreat. Featuring a comfortable queen bed, en-suite bathroom, and a private terrace to relax and read a book.</p>
                             <ul class="space-y-2 mb-8 text-gray-700">
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Terrace</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                                <li class="flex items-center"><i data-feather="users" class="w-5 h-5 text-cyan-700 mr-2"></i>Sleeps 2 (Queen Bed)</li>
+                                <li class="flex items-center"><i data-feather="eye" class="w-5 h-5 text-cyan-700 mr-2"></i>Private Terrace</li>
+                                <li class="flex items-center"><i data-feather="wind" class="w-5 h-5 text-cyan-700 mr-2"></i>Ceiling Fan</li>
+                                <li class="flex items-center"><i data-feather="gift" class="w-5 h-5 text-cyan-700 mr-2"></i>Eco-Friendly Toiletries</li>
                             </ul>
                              <!-- Updated rounded corner -->
                             <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
@@ -609,10 +660,10 @@
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">Eco-Chic Dorm</h3>
                             <p class="text-gray-600 mb-6">Perfect for solo travelers and those on a budget. Our shared dorms are clean, secure, and stylish, featuring custom-built bunk beds, personal lockers, and shared bathrooms. A great place to meet fellow travelers.</p>
                             <ul class="space-y-2 mb-8 text-gray-700">
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>4-Bed Shared Room</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared Bathrooms</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Personal Lockers</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
+                                <li class="flex items-center"><i data-feather="users" class="w-5 h-5 text-cyan-700 mr-2"></i>4-Bed Shared Room</li>
+                                <li class="flex items-center"><i data-feather="droplet" class="w-5 h-5 text-cyan-700 mr-2"></i>Shared Bathrooms</li>
+                                <li class="flex items-center"><i data-feather="lock" class="w-5 h-5 text-cyan-700 mr-2"></i>Personal Lockers</li>
+                                <li class="flex items-center"><i data-feather="wind" class="w-5 h-5 text-cyan-700 mr-2"></i>Ceiling Fan</li>
                             </ul>
                              <!-- Updated rounded corner -->
                             <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
@@ -634,10 +685,10 @@
                              <h3 class="text-3xl font-bold text-gray-900 mb-4">Cozy Matrimonial</h3>
                              <p class="text-gray-600 mb-6">A comfortable and inviting room perfect for couples or solo travelers, featuring a queen bed and natural decor.</p>
                              <ul class="space-y-2 mb-8 text-gray-700">
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ensuite Bathroom</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                                <li class="flex items-center"><i data-feather="users" class="w-5 h-5 text-cyan-700 mr-2"></i>Sleeps 2 (Queen Bed)</li>
+                                <li class="flex items-center"><i data-feather="droplet" class="w-5 h-5 text-cyan-700 mr-2"></i>Ensuite Bathroom</li>
+                                <li class="flex items-center"><i data-feather="wind" class="w-5 h-5 text-cyan-700 mr-2"></i>Ceiling Fan</li>
+                                <li class="flex items-center"><i data-feather="gift" class="w-5 h-5 text-cyan-700 mr-2"></i>Eco-Friendly Toiletries</li>
                              </ul>
                                <!-- Updated rounded corner -->
                              <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
@@ -645,9 +696,72 @@
                              </a>
                          </div>
                      </div>
-                </div>
-            </div>
+
+                    <!-- START: Testimonials Section -->
+                    <div id="accommodation-testimonials" class="py-20 bg-cyan-50 rounded-xl my-20">
+                        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Guest Room Experiences</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <!-- Testimonial 1 -->
+                                <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-cyan-600">
+                                    <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                                        "The Ocean View Suite was breathtaking! Waking up to that view every morning was pure magic. The room was spacious, beautifully decorated with local materials, and incredibly comfortable. Worth every penny!"
+                                    </blockquote>
+                                    <cite class="block mt-4 text-right font-medium text-gray-800">
+                                        - Jessica L.
+                                        <span class="block text-sm font-normal text-gray-500">Stayed in Ocean View Suite</span>
+                                    </cite>
+                                </div>
+                                <!-- Testimonial 2 -->
+                                <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-600">
+                                    <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                                        "Loved the Garden Bungalow! It felt like our own private little oasis. Super quiet and peaceful, surrounded by beautiful plants. The terrace was perfect for reading. Such a relaxing stay."
+                                    </blockquote>
+                                    <cite class="block mt-4 text-right font-medium text-gray-800">
+                                        - Mark & Anna T.
+                                        <span class="block text-sm font-normal text-gray-500">Stayed in Garden Bungalow</span>
+                                    </cite>
+                                </div>
+                                <!-- Testimonial 3 (Optional) -->
+                                <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-amber-600 md:col-span-2 md:max-w-xl md:mx-auto">
+                                    <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                                        "The dorm was fantastic value! Clean, comfortable beds, secure lockers, and a great way to meet other travelers. Much nicer than your average hostel dorm. Highly recommend for solo adventurers."
+                                    </blockquote>
+                                    <cite class="block mt-4 text-right font-medium text-gray-800">
+                                        - Ben S.
+                                        <span class="block text-sm font-normal text-gray-500">Stayed in Eco-Chic Dorm</span>
+                                    </cite>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Testimonials Section -->
+
+                    <!-- START: Call to Action Section -->
+                    <div class="relative py-16 bg-gradient-to-r from-cyan-700 to-teal-600 text-center rounded-xl shadow-xl overflow-hidden mt-16"> 
+                         <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                             <h2 class="text-3xl font-bold text-white mb-4 hero-text-shadow">Ready for Your Coastal Escape?</h2> 
+                             <p class="text-lg text-cyan-100 mb-8 hero-text-shadow">
+                                  Choose your perfect eco-friendly sanctuary and book your Mancora adventure today. Dates fill up fast!
+                             </p>
+                             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                                 <!-- Updated rounded corner -->
+                                 <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-cyan-800 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
+                                     Check Availability & Book
+                                 </a>
+                                  <!-- Updated rounded corner -->
+                                 <a href="#contact" class="nav-link inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 border border-white text-base font-medium rounded-xl shadow-sm text-white bg-white/10 hover:bg-white/20 transition duration-150 ease-in-out" data-page="contact">
+                                     Have Questions? Contact Us
+                                 </a>
+                             </div>
+                         </div>
+                    </div>
+                    <!-- END: Call to Action Section -->
+
+                </div> <!-- End max-w-7xl -->
+            </div> <!-- End py-20 -->
         </section>
+
 
         <!-- =================== -->
         <!-- SURF PAGE      -->
@@ -838,10 +952,10 @@
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Sacred Space</h3>
                             <p class="text-gray-600 mb-6">Practice with the sound of the ocean and a gentle breeze. Our shala is built from local, eco-friendly materials and offers a panoramic view of the coastline. It's the perfect place to start your day or unwind at sunset.</p>
                             <ul class="space-y-2 mb-8 text-gray-700">
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open-air with ocean views</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Natural, sustainable materials</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mats, blocks, and props provided</li>
-                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open for guest self-practice</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-cyan-700 mr-2"></i>Open-air with ocean views</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-cyan-700 mr-2"></i>Natural, sustainable materials</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-cyan-700 mr-2"></i>Mats, blocks, and props provided</li>
+                                <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-cyan-700 mr-2"></i>Open for guest self-practice</li>
                             </ul>
                         </div>
                     </div>
@@ -928,12 +1042,12 @@
                          <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Practices & Community</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Zero Single-Use Plastic Policy</p>
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Comprehensive Recycling & Composting</p>
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Locally Sourced Food for our Restaurant</p>
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Hiring 100% Local Staff</p>
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Eco-Friendly Cleaning Products</p>
-                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Supporting Local Artisans & Businesses</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Zero Single-Use Plastic Policy</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Comprehensive Recycling & Composting</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Locally Sourced Food for our Restaurant</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Hiring 100% Local Staff</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Eco-Friendly Cleaning Products</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i>Supporting Local Artisans & Businesses</p>
                         </div>
                     </div>
                 </div>
@@ -1469,25 +1583,52 @@
             }
             
             // Initialize Feather Icons - More Robust Check
-            try {
-                if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
-                    feather.replace();
-                } else {
-                    // Optionally wait a tiny bit in case script is slow loading, then check again
-                    setTimeout(() => {
-                         if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
-                             feather.replace();
-                         } else {
-                              console.error("Feather icons library (feather) is not loaded or not defined correctly after delay.");
-                         }
-                    }, 500); // Wait 500ms
+            // We need to re-run this *after* adding new content that might contain icons.
+            function initializeFeatherIcons() {
+                try {
+                    if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
+                        feather.replace();
+                    } else {
+                        // Optionally wait a tiny bit in case script is slow loading, then check again
+                        setTimeout(() => {
+                             if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
+                                 feather.replace();
+                             } else {
+                                  console.error("Feather icons library (feather) is not loaded or not defined correctly after delay.");
+                             }
+                        }, 500); // Wait 500ms
+                    }
+                } catch (e) {
+                    console.error("Feather icons failed to initialize:", e);
                 }
-            } catch (e) {
-                console.error("Feather icons failed to initialize:", e);
             }
+            initializeFeatherIcons(); // Call it now
+            // ALSO: Re-run Feather Icons initialization whenever a new page is shown, 
+            //       as the icons might be added dynamically.
+            const observer = new MutationObserver((mutationsList) => {
+                for(let mutation of mutationsList) {
+                    if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                         // Check if the active class was added to a section
+                        const addedNodes = Array.from(mutation.addedNodes);
+                        const isActiveSection = addedNodes.some(node => node.nodeType === 1 && node.tagName === 'SECTION' && node.classList.contains('active'));
+                        const attributeChangedToActive = mutation.target.nodeType === 1 && mutation.target.tagName === 'SECTION' && mutation.attributeName === 'class' && mutation.target.classList.contains('active');
+
+                        if (isActiveSection || attributeChangedToActive) {
+                            initializeFeatherIcons(); // Re-initialize icons when a section becomes active
+                            break; 
+                        }
+                    }
+                }
+            });
+
+            if (mainContent) {
+                observer.observe(mainContent, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+            }
+
 
         });
     </script>
 
 </body>
 </html>
+
