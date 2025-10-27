@@ -25,8 +25,8 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 700; /* Default bold for Poppins headings */
         }
-        /* Make Hero heading extra bold */
-         #home h2.font-black {
+        /* Make Hero/Banner heading extra bold */
+         #home h2.font-black, main section .font-black {
              font-weight: 900; /* Use Poppins Black for hero */
          }
          /* Make section titles bold */
@@ -481,7 +481,11 @@
                          <img src="https://placehold.co/600x450/3b82f6/FFFFFF?text=Pool+Area" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Pool area at Eco House" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
                          <img src="https://placehold.co/600x450/ef4444/FFFFFF?text=Mancora+Town" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Vibrant street in Mancora town" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
                     </div>
-                     <!-- Removed link to full gallery -->
+                     <!-- Removed Full Gallery Link
+                     <div class="text-center mt-8">
+                         <a href="#gallery-page" class="nav-link inline-block text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="gallery-page">View Full Gallery &rarr;</a>
+                     </div>
+                     -->
                 </div>
             </div>
 
@@ -518,289 +522,350 @@
         <!-- =================== -->
         <!-- ACCOMMODATION PAGE -->
         <!-- =================== -->
-        <section id="accommodation" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Find Your Sanctuary</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Each of our spaces is designed with natural materials, comfort, and tranquility in mind. Find the perfect room for your stay.</p>
+        <section id="accommodation" class="bg-white">
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/0e7490/FFFFFF?text=Accommodation" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Comfortable bed in an eco-friendly room" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Find Your Sanctuary
+                    </h2>
+                </div>
+            </div>
 
-                <!-- Room 1: Ocean View Suite - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                         <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/0e7490/FFFFFF?text=Ocean+View+Suite" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/0e7490/FFF?text=Suite'"
-                              alt="Ocean View Suite with private balcony" class="w-full h-80 md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Ocean View Suite</h3>
-                        <p class="text-gray-600 mb-6">Wake up to the sound of the waves. Our spacious Ocean View Suites feature a private king bed, an en-suite bathroom, and a private balcony with panoramic views of the Pacific. The ultimate in comfort and style.</p>
-                        <ul class="space-y-2 mb-8 text-gray-700">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (King Bed)</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Balcony & Hammock</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Air Conditioning</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
-                        </ul>
-                         <!-- Updated rounded corner -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
-                            Book This Suite
-                        </a>
-                    </div>
-                </div>
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Each of our spaces is designed with natural materials, comfort, and tranquility in mind. Find the perfect room for your stay.</p>
 
-                <!-- Room 2: Garden Bungalow - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/10b981/FFFFFF?text=Garden+Bungalow" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/10b981/FFF?text=Bungalow'"
-                              alt="Garden Bungalow surrounded by plants" class="w-full h-80 md:h-full object-cover">
+                    <!-- Room 1: Ocean View Suite - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                             <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/0e7490/FFFFFF?text=Ocean+View+Suite" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/0e7490/FFF?text=Suite'"
+                                  alt="Ocean View Suite with private balcony" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Ocean View Suite</h3>
+                            <p class="text-gray-600 mb-6">Wake up to the sound of the waves. Our spacious Ocean View Suites feature a private king bed, an en-suite bathroom, and a private balcony with panoramic views of the Pacific. The ultimate in comfort and style.</p>
+                            <ul class="space-y-2 mb-8 text-gray-700">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (King Bed)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Balcony & Hammock</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Air Conditioning</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                            </ul>
+                             <!-- Updated rounded corner -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
+                                Book This Suite
+                            </a>
+                        </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Garden Bungalow</h3>
-                        <p class="text-gray-600 mb-6">Tucked away in our lush tropical gardens, the Garden Bungalows offer a peaceful and private retreat. Featuring a comfortable queen bed, en-suite bathroom, and a private terrace to relax and read a book.</p>
-                        <ul class="space-y-2 mb-8 text-gray-700">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Terrace</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
-                        </ul>
-                         <!-- Updated rounded corner -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
-                            Book This Bungalow
-                        </a>
+
+                    <!-- Room 2: Garden Bungalow - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/10b981/FFFFFF?text=Garden+Bungalow" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/10b981/FFF?text=Bungalow'"
+                                  alt="Garden Bungalow surrounded by plants" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Garden Bungalow</h3>
+                            <p class="text-gray-600 mb-6">Tucked away in our lush tropical gardens, the Garden Bungalows offer a peaceful and private retreat. Featuring a comfortable queen bed, en-suite bathroom, and a private terrace to relax and read a book.</p>
+                            <ul class="space-y-2 mb-8 text-gray-700">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>Private Terrace</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                            </ul>
+                             <!-- Updated rounded corner -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
+                                Book This Bungalow
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Room 3: Eco-Chic Dorm - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                         <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/f59e0b/FFFFFF?text=Eco-Chic+Dorm" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/f59e0b/FFF?text=Dorm'"
-                              alt="Clean and modern eco-chic dorm room" class="w-full h-80 md:h-full object-cover">
+                    
+                    <!-- Room 3: Eco-Chic Dorm - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                             <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/f59e0b/FFFFFF?text=Eco-Chic+Dorm" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/f59e0b/FFF?text=Dorm'"
+                                  alt="Clean and modern eco-chic dorm room" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Eco-Chic Dorm</h3>
+                            <p class="text-gray-600 mb-6">Perfect for solo travelers and those on a budget. Our shared dorms are clean, secure, and stylish, featuring custom-built bunk beds, personal lockers, and shared bathrooms. A great place to meet fellow travelers.</p>
+                            <ul class="space-y-2 mb-8 text-gray-700">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>4-Bed Shared Room</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared Bathrooms</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Personal Lockers</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
+                            </ul>
+                             <!-- Updated rounded corner -->
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
+                                Book Your Bed
+                            </a>
+                        </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Eco-Chic Dorm</h3>
-                        <p class="text-gray-600 mb-6">Perfect for solo travelers and those on a budget. Our shared dorms are clean, secure, and stylish, featuring custom-built bunk beds, personal lockers, and shared bathrooms. A great place to meet fellow travelers.</p>
-                        <ul class="space-y-2 mb-8 text-gray-700">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>4-Bed Shared Room</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shared Bathrooms</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Personal Lockers</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
-                        </ul>
-                         <!-- Updated rounded corner -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
-                            Book Your Bed
-                        </a>
-                    </div>
-                </div>
-                 <!-- Room 4: Cozy Matrimonial - Updated rounded corner -->
-                 <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
-                     <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/fbbf24/FFFFFF?text=Cozy+Matrimonial" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/fbbf24/FFF?text=Room 4'"
-                              alt="Cozy Matrimonial room" class="w-full h-80 md:h-full object-cover">
+                     <!-- Room 4: Cozy Matrimonial - Updated rounded corner -->
+                     <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                         <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/fbbf24/FFFFFF?text=Cozy+Matrimonial" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/fbbf24/FFF?text=Room 4'"
+                                  alt="Cozy Matrimonial room" class="w-full h-80 md:h-full object-cover">
+                         </div>
+                         <div class="md:w-1/2 p-8 md:p-12">
+                              <!-- Heading uses Poppins Bold -->
+                             <h3 class="text-3xl font-bold text-gray-900 mb-4">Cozy Matrimonial</h3>
+                             <p class="text-gray-600 mb-6">A comfortable and inviting room perfect for couples or solo travelers, featuring a queen bed and natural decor.</p>
+                             <ul class="space-y-2 mb-8 text-gray-700">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ensuite Bathroom</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
+                             </ul>
+                               <!-- Updated rounded corner -->
+                             <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
+                                 Book This Room
+                             </a>
+                         </div>
                      </div>
-                     <div class="md:w-1/2 p-8 md:p-12">
-                          <!-- Heading uses Poppins Bold -->
-                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Cozy Matrimonial</h3>
-                         <p class="text-gray-600 mb-6">A comfortable and inviting room perfect for couples or solo travelers, featuring a queen bed and natural decor.</p>
-                         <ul class="space-y-2 mb-8 text-gray-700">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Sleeps 2 (Queen Bed)</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ensuite Bathroom</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
-                         </ul>
-                           <!-- Updated rounded corner -->
-                         <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
-                             Book This Room
-                         </a>
-                     </div>
-                 </div>
-
+                </div>
             </div>
         </section>
 
         <!-- =================== -->
         <!-- SURF PAGE      -->
         <!-- =================== -->
-        <section id="surf" class="py-20 bg-gray-50"> 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Catch the Perfect Wave</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Mancora is home to some of the most consistent and fun waves in Peru. Whether it's your first time or you're a seasoned pro, we have something for you.</p>
+        <section id="surf" class="bg-gray-50"> 
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/0891b2/FFFFFF?text=Surfing" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Surfer riding a wave in Mancora" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Catch the Perfect Wave
+                    </h2>
+                </div>
+            </div>
 
-                <!-- Lessons & Coaching - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/0891b2/FFFFFF?text=Surf+Lesson" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/0891b2/FFF?text=Lesson'"
-                              alt="Surf lesson on the beach" class="w-full h-80 md:h-full object-cover">
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Mancora is home to some of the most consistent and fun waves in Peru. Whether it's your first time or you're a seasoned pro, we have something for you.</p>
+
+                    <!-- Lessons & Coaching - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/0891b2/FFFFFF?text=Surf+Lesson" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/0891b2/FFF?text=Lesson'"
+                                  alt="Surf lesson on the beach" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                              <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Surf Lessons & Coaching</h3>
+                            <p class="text-gray-600 mb-6">Our experienced, local instructors are passionate about surfing and sharing their knowledge. We focus on safety, fun, and progression.</p>
+                            <ul class="space-y-3 mb-8 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">Beginner Lessons:</strong> Learn the basics of paddling, popping up, and wave etiquette in a safe, fun environment.</li>
+                                <li><strong class="font-medium text-gray-900">Intermediate Coaching:</strong> Ready to turn? We'll help you improve your technique, read waves, and start carving.</li>
+                                <li><strong class="font-medium text-gray-900">Advanced Guiding:</strong> Let our local guides take you to the best, uncrowded breaks in the region based on the day's swell and tide.</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 italic">Lessons and rentals available as add-ons when booking your stay.</p>
+                             <!-- Optional Link to external Surf Site -->
+                             <!-- <a href="your-surf-site-url" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-cyan-700 hover:text-cyan-900">Visit our dedicated Surf Site &rarr;</a> -->
+                        </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                          <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Surf Lessons & Coaching</h3>
-                        <p class="text-gray-600 mb-6">Our experienced, local instructors are passionate about surfing and sharing their knowledge. We focus on safety, fun, and progression.</p>
-                        <ul class="space-y-3 mb-8 text-gray-700">
-                            <li><strong class="font-medium text-gray-900">Beginner Lessons:</strong> Learn the basics of paddling, popping up, and wave etiquette in a safe, fun environment.</li>
-                            <li><strong class="font-medium text-gray-900">Intermediate Coaching:</strong> Ready to turn? We'll help you improve your technique, read waves, and start carving.</li>
-                            <li><strong class="font-medium text-gray-900">Advanced Guiding:</strong> Let our local guides take you to the best, uncrowded breaks in the region based on the day's swell and tide.</li>
-                        </ul>
-                         <p class="text-sm text-gray-500 italic">Lessons and rentals available as add-ons when booking your stay.</p>
-                         <!-- Optional Link to external Surf Site -->
-                         <!-- <a href="your-surf-site-url" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-cyan-700 hover:text-cyan-900">Visit our dedicated Surf Site &rarr;</a> -->
+
+                    <!-- Board Rentals - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/a21caf/FFFFFF?text=Surfboard+Quiver" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/a21caf/FFF?text=Boards'"
+                                  alt="Quiver of surfboards for rent" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Board Rentals</h3>
+                            <p class="text-gray-600 mb-6">Travel light and use our extensive quiver. We have boards for all levels and conditions, from high-performance shortboards to funboards and longboards.</p>
+                            <ul class="space-y-2 mb-8 text-gray-700">
+                                <li>- Soft-top foam boards (perfect for beginners)</li>
+                                <li>- Funboards & Mini-Mals (7'0" - 8'0")</li>
+                                <li>- Longboards (9'0" +)</li>
+                                <li>- Performance Shortboards (various sizes)</li>
+                            </ul>
+                            <p class="text-gray-600">Rentals available by the hour, day, or week as add-ons during booking.</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Board Rentals - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/a21caf/FFFFFF?text=Surfboard+Quiver" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/a21caf/FFF?text=Boards'"
-                              alt="Quiver of surfboards for rent" class="w-full h-80 md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Board Rentals</h3>
-                        <p class="text-gray-600 mb-6">Travel light and use our extensive quiver. We have boards for all levels and conditions, from high-performance shortboards to funboards and longboards.</p>
-                        <ul class="space-y-2 mb-8 text-gray-700">
-                            <li>- Soft-top foam boards (perfect for beginners)</li>
-                            <li>- Funboards & Mini-Mals (7'0" - 8'0")</li>
-                            <li>- Longboards (9'0" +)</li>
-                            <li>- Performance Shortboards (various sizes)</li>
-                        </ul>
-                        <p class="text-gray-600">Rentals available by the hour, day, or week as add-ons during booking.</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
         <!-- =================== -->
         <!-- KITESURF PAGE    -->
         <!-- =================== -->
-        <section id="kitesurf" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Ride the Wind</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Mancora is a world-renowned kitesurfing spot, thanks to our consistent thermal winds and warm waters. Come see why kiters return here year after year.</p>
+        <section id="kitesurf" class="bg-white">
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/db2777/FFFFFF?text=Kitesurfing" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Kitesurfer in the air" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Ride the Wind
+                    </h2>
+                </div>
+            </div>
+            
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Mancora is a world-renowned kitesurfing spot, thanks to our consistent thermal winds and warm waters. Come see why kiters return here year after year.</p>
 
-                <!-- Lessons - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/db2777/FFFFFF?text=Kitesurf+Lesson" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/db2777/FFF?text=Kite+Lesson'"
-                              alt="Kitesurf lesson in the water" class="w-full h-80 md:h-full object-cover">
+                    <!-- Lessons - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/db2777/FFFFFF?text=Kitesurf+Lesson" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/db2777/FFF?text=Kite+Lesson'"
+                                  alt="Kitesurf lesson in the water" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">IKO Certified Lessons</h3>
+                            <p class="text-gray-600 mb-6">Our kite school is IKO certified, ensuring the highest standards of safety and teaching quality. We offer courses for all levels.</p>
+                            <ul class="space-y-3 mb-8 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">Discovery (3 Hours):</strong> Learn the basics, safety, and fly a trainer kite on the beach.</li>
+                                <li><strong class="font-medium text-gray-900">Full Course (9 Hours):</strong> Get in the water! This course will take you from body-dragging to your first water starts.</li>
+                                <li><strong class="font-medium text-gray-900">Advanced Coaching:</strong> Perfect your transitions, learn to jump, or dial in your unhooked tricks.</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 italic">IKO courses available as add-ons when booking your stay.</p>
+                             <!-- Optional Link to external Kite Site -->
+                             <!-- <a href="your-kite-site-url" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-cyan-700 hover:text-cyan-900">Visit our dedicated Kite Site &rarr;</a> -->
+                        </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
+                    
+                    <!-- The Spot - Updated rounded corner -->
+                    <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12">
                          <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">IKO Certified Lessons</h3>
-                        <p class="text-gray-600 mb-6">Our kite school is IKO certified, ensuring the highest standards of safety and teaching quality. We offer courses for all levels.</p>
-                        <ul class="space-y-3 mb-8 text-gray-700">
-                            <li><strong class="font-medium text-gray-900">Discovery (3 Hours):</strong> Learn the basics, safety, and fly a trainer kite on the beach.</li>
-                            <li><strong class="font-medium text-gray-900">Full Course (9 Hours):</strong> Get in the water! This course will take you from body-dragging to your first water starts.</li>
-                            <li><strong class="font-medium text-gray-900">Advanced Coaching:</strong> Perfect your transitions, learn to jump, or dial in your unhooked tricks.</li>
-                        </ul>
-                         <p class="text-sm text-gray-500 italic">IKO courses available as add-ons when booking your stay.</p>
-                         <!-- Optional Link to external Kite Site -->
-                         <!-- <a href="your-kite-site-url" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-cyan-700 hover:text-cyan-900">Visit our dedicated Kite Site &rarr;</a> -->
-                    </div>
-                </div>
-                
-                <!-- The Spot - Updated rounded corner -->
-                <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12">
-                     <!-- Heading uses Poppins Bold -->
-                    <h3 class="text-3xl font-bold text-center mb-8">The Spot: Conditions & Rentals</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div>
-                            <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h4 class="text-2xl font-semibold mb-2">The Wind</h4>
-                            <p class="text-gray-300">Consistent side-onshore thermal winds. Best season is April to December. Average 18-25 knots, perfect for 7m-10m kites.</p>
-                        </div>
-                        <div>
-                            <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM20 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"></path></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h4 class="text-2xl font-semibold mb-2">The Water</h4>
-                            <p class="text-gray-300">Warm water all year - no wetsuit needed! A mix of flat water inside the reef and fun waves further out. Wide, sandy beach for setup.</p>
-                        </div>
-                        <div>
-                            <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"></path><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h4 class="text-2xl font-semibold mb-2">Gear & Storage</h4>
-                            <p class="text-gray-300">We rent the latest Duotone & Core kites and boards. Secure storage available. Gear rental can be added when booking.</p>
+                        <h3 class="text-3xl font-bold text-center mb-8">The Spot: Conditions & Rentals</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div>
+                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h4 class="text-2xl font-semibold mb-2">The Wind</h4>
+                                <p class="text-gray-300">Consistent side-onshore thermal winds. Best season is April to December. Average 18-25 knots, perfect for 7m-10m kites.</p>
+                            </div>
+                            <div>
+                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM20 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"></path></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h4 class="text-2xl font-semibold mb-2">The Water</h4>
+                                <p class="text-gray-300">Warm water all year - no wetsuit needed! A mix of flat water inside the reef and fun waves further out. Wide, sandy beach for setup.</p>
+                            </div>
+                            <div>
+                                <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"></path><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h4 class="text-2xl font-semibold mb-2">Gear & Storage</h4>
+                                <p class="text-gray-300">We rent the latest Duotone & Core kites and boards. Secure storage available. Gear rental can be added when booking.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         
         <!-- =================== -->
         <!-- YOGA PAGE      -->
         <!-- =================== -->
-        <section id="yoga" class="py-20 bg-gray-50"> 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Connect & Restore</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Find your flow in our stunning open-air yoga shala. Whether you're a beginner or an advanced yogi, our classes are designed to complement your active lifestyle.</p>
-
-                <!-- Shala - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/16a34a/FFFFFF?text=Ocean+View+Yoga+Shala" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/16a34a/FFF?text=Yoga+Shala'"
-                              alt="Open-air yoga shala with ocean view" class="w-full h-80 md:h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Sacred Space</h3>
-                        <p class="text-gray-600 mb-6">Practice with the sound of the ocean and a gentle breeze. Our shala is built from local, eco-friendly materials and offers a panoramic view of the coastline. It's the perfect place to start your day or unwind at sunset.</p>
-                        <ul class="space-y-2 mb-8 text-gray-700">
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open-air with ocean views</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Natural, sustainable materials</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mats, blocks, and props provided</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open for guest self-practice</li>
-                        </ul>
-                    </div>
+        <section id="yoga" class="bg-gray-50"> 
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/16a34a/FFFFFF?text=Yoga" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Yoga shala overlooking the ocean" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Connect & Restore
+                    </h2>
                 </div>
+            </div>
 
-                <!-- Classes - Updated rounded corner -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
-                    <div class="md:w-1/2">
-                          <!-- Added loading="lazy" -->
-                         <img src="https://placehold.co/800x600/facc15/FFFFFF?text=Yoga+Class" 
-                              loading="lazy"
-                              onerror="this.src='https://placehold.co/800x600/facc15/FFF?text=Yoga+Class'"
-                              alt="Yoga class in session" class="w-full h-80 md:h-full object-cover">
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Find your flow in our stunning open-air yoga shala. Whether you're a beginner or an advanced yogi, our classes are designed to complement your active lifestyle.</p>
+
+                    <!-- Shala - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/16a34a/FFFFFF?text=Ocean+View+Yoga+Shala" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/16a34a/FFF?text=Yoga+Shala'"
+                                  alt="Open-air yoga shala with ocean view" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Sacred Space</h3>
+                            <p class="text-gray-600 mb-6">Practice with the sound of the ocean and a gentle breeze. Our shala is built from local, eco-friendly materials and offers a panoramic view of the coastline. It's the perfect place to start your day or unwind at sunset.</p>
+                            <ul class="space-y-2 mb-8 text-gray-700">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open-air with ocean views</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Natural, sustainable materials</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mats, blocks, and props provided</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Open for guest self-practice</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                         <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Classes & Styles</h3>
-                        <p class="text-gray-600 mb-6">We offer 2-3 classes daily, led by our certified resident and guest instructors. Private classes are also available upon request.</p>
-                        <ul class="space-y-3 mb-8 text-gray-700">
-                            <li><strong class="font-medium text-gray-900">Morning Vinyasa:</strong> An energetic flow to awaken your body and set your intention for the day.</li>
-                            <li><strong class="font-medium text-gray-900">Sunset Yin/Restorative:</strong> A slow, deep-stretch class to restore your muscles after a long day of surfing or kiting.</li>
-                            <li><strong class="font-medium text-gray-900">SUP Yoga:</strong> Take your practice to the water! A fun challenge for your balance and core (seasonal).</li>
-                        </ul>
-                         <p class="text-sm text-gray-500 italic">Class schedule available upon check-in. Can be added to your stay.</p>
+
+                    <!-- Classes - Updated rounded corner -->
+                    <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                        <div class="md:w-1/2">
+                              <!-- Added loading="lazy" -->
+                             <img src="https://placehold.co/800x600/facc15/FFFFFF?text=Yoga+Class" 
+                                  loading="lazy"
+                                  onerror="this.src='https://placehold.co/800x600/facc15/FFF?text=Yoga+Class'"
+                                  alt="Yoga class in session" class="w-full h-80 md:h-full object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 md:p-12">
+                             <!-- Heading uses Poppins Bold -->
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">Classes & Styles</h3>
+                            <p class="text-gray-600 mb-6">We offer 2-3 classes daily, led by our certified resident and guest instructors. Private classes are also available upon request.</p>
+                            <ul class="space-y-3 mb-8 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">Morning Vinyasa:</strong> An energetic flow to awaken your body and set your intention for the day.</li>
+                                <li><strong class="font-medium text-gray-900">Sunset Yin/Restorative:</strong> A slow, deep-stretch class to restore your muscles after a long day of surfing or kiting.</li>
+                                <li><strong class="font-medium text-gray-900">SUP Yoga:</strong> Take your practice to the water! A fun challenge for your balance and core (seasonal).</li>
+                            </ul>
+                             <p class="text-sm text-gray-500 italic">Class schedule available upon check-in. Can be added to your stay.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -809,51 +874,67 @@
         <!-- =================== -->
         <!-- SUSTAINABILITY (ECO HOUSE) PAGE -->
         <!-- =================== -->
-        <section id="sustainability" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">The Eco House Philosophy</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">"Eco House" isn't just a name—it's our promise. We are committed to sustainable tourism that respects our beautiful environment and supports our local community.</p>
-
-                  <!-- Updated rounded corner, added loading="lazy" -->
-                 <img src="https://placehold.co/1200x600/14b8a6/FFFFFF?text=Sustainable+Practices" 
-                      loading="lazy"
-                      onerror="this.src='https://placehold.co/1200x600/14b8a6/FFF?text=Eco+Practices'"
-                      alt="Visual representation of sustainability efforts" class="w-full h-auto object-cover rounded-xl shadow-lg mb-12">
-
-                <!-- Core Pillars -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
-                    <div>
-                        <svg class="w-12 h-12 text-green-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold mb-2">Eco-Construction</h3>
-                        <p class="text-gray-600">Our buildings are made from locally sourced wood, bamboo, and recycled materials. The design promotes natural airflow, reducing the need for A/C.</p>
-                    </div>
-                    <div>
-                        <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 7.4 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM12.56 12.03c.18-.6.4-1.17.65-1.74A4.25 4.25 0 0 1 15.6 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="M11 20.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 11.4 13.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM17.56 16.03c.18-.6.4-1.17.65-1.74a4.25 4.25 0 0 1 2.4-1.2c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="m14 3 1.1 2.3c.1.2.3.4.5.5L18 7l-2.3 1.1c-.2.1-.4.3-.5.5L14 11l-1.1-2.3c-.1-.2-.3-.4-.5-.5L10 7l2.3-1.1c.2-.1.4-.3.5-.5L14 3z"></path></svg>
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold mb-2">Water Conservation</h3>
-                        <p class="text-gray-600">We capture and treat 100% of our greywater, which is then used to irrigate our lush tropical gardens. All fixtures are low-flow to reduce waste.</p>
-                    </div>
-                    <div>
-                        <svg class="w-12 h-12 text-yellow-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold mb-2">Renewable Energy</h3>
-                        <p class="text-gray-600">Solar panels heat all of our water, and we utilize LED lighting and energy-efficient appliances throughout the property to minimize our footprint.</p>
-                    </div>
+        <section id="sustainability" class="bg-white">
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/14b8a6/FFFFFF?text=Sustainability" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Eco-friendly building materials" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        The Eco House Philosophy
+                    </h2>
                 </div>
+            </div>
 
-                <!-- Our Practices - Updated rounded corner -->
-                <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
-                     <!-- Heading uses Poppins Bold -->
-                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Practices & Community</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Zero Single-Use Plastic Policy</p>
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Comprehensive Recycling & Composting</p>
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Locally Sourced Food for our Restaurant</p>
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Hiring 100% Local Staff</p>
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Eco-Friendly Cleaning Products</p>
-                        <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Supporting Local Artisans & Businesses</p>
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">"Eco House" isn't just a name—it's our promise. We are committed to sustainable tourism that respects our beautiful environment and supports our local community.</p>
+
+                      <!-- Updated rounded corner, added loading="lazy" -->
+                     <img src="https://placehold.co/1200x600/14b8a6/FFFFFF?text=Sustainable+Practices" 
+                          loading="lazy"
+                          onerror="this.src='https://placehold.co/1200x600/14b8a6/FFF?text=Eco+Practices'"
+                          alt="Visual representation of sustainability efforts" class="w-full h-auto object-cover rounded-xl shadow-lg mb-12">
+
+                    <!-- Core Pillars -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+                        <div>
+                            <svg class="w-12 h-12 text-green-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold mb-2">Eco-Construction</h3>
+                            <p class="text-gray-600">Our buildings are made from locally sourced wood, bamboo, and recycled materials. The design promotes natural airflow, reducing the need for A/C.</p>
+                        </div>
+                        <div>
+                            <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 7.4 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM12.56 12.03c.18-.6.4-1.17.65-1.74A4.25 4.25 0 0 1 15.6 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="M11 20.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 11.4 13.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM17.56 16.03c.18-.6.4-1.17.65-1.74a4.25 4.25 0 0 1 2.4-1.2c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="m14 3 1.1 2.3c.1.2.3.4.5.5L18 7l-2.3 1.1c-.2.1-.4.3-.5.5L14 11l-1.1-2.3c-.1-.2-.3-.4-.5-.5L10 7l2.3-1.1c.2-.1.4-.3.5-.5L14 3z"></path></svg>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold mb-2">Water Conservation</h3>
+                            <p class="text-gray-600">We capture and treat 100% of our greywater, which is then used to irrigate our lush tropical gardens. All fixtures are low-flow to reduce waste.</p>
+                        </div>
+                        <div>
+                            <svg class="w-12 h-12 text-yellow-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold mb-2">Renewable Energy</h3>
+                            <p class="text-gray-600">Solar panels heat all of our water, and we utilize LED lighting and energy-efficient appliances throughout the property to minimize our footprint.</p>
+                        </div>
+                    </div>
+
+                    <!-- Our Practices - Updated rounded corner -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
+                        <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Practices & Community</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Zero Single-Use Plastic Policy</p>
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Comprehensive Recycling & Composting</p>
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Locally Sourced Food for our Restaurant</p>
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Hiring 100% Local Staff</p>
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Eco-Friendly Cleaning Products</p>
+                            <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Supporting Local Artisans & Businesses</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -862,45 +943,61 @@
         <!-- =================== -->
         <!-- RESTAURANT PAGE -->
         <!-- =================== -->
-        <section id="restaurant" class="py-20 bg-gray-50"> 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Nourish Your Body</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Our on-site restaurant and bar, "Nourish," is the heart of our hotel. We believe that good food is a key part of a good life.</p>
+        <section id="restaurant" class="bg-gray-50"> 
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/d946ef/FFFFFF?text=Restaurant" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Fresh ceviche dish" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Nourish Your Body
+                    </h2>
+                </div>
+            </div>
 
-                <!-- Philosophy - Updated rounded corner -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 mb-12">
-                     <!-- Heading uses Poppins Bold -->
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Local, Fresh, Sustainable</h3>
-                    <p class="text-lg text-gray-600 mb-6">Our menu is a celebration of Peru's incredible bounty. We work directly with local farmers and fishermen to source the freshest ingredients daily. Expect vibrant ceviches, healthy poke bowls, hearty post-surf breakfasts, and delicious tropical cocktails.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
-                        <div>
-                            <strong class="font-medium text-gray-900">Breakfast</strong>
-                            <p>Smoothie bowls, avocado toast, Peruvian coffee, and fresh-squeezed juices. Included with your stay!</p>
-                        </div>
-                        <div>
-                            <strong class="font-medium text-gray-900">Lunch & Dinner</strong>
-                            <p>Fresh ceviche, fish tacos, quinoa salads, lomo saltado, and wood-fired pizzas.</p>
-                        </div>
-                        <div>
-                            <strong class="font-medium text-gray-900">The Bar</strong>
-                            <p>Pisco sours, chilcanos, craft beers, and healthy non-alcoholic elixirs.</p>
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Our on-site restaurant and bar, "Nourish," is the heart of our hotel. We believe that good food is a key part of a good life.</p>
+
+                    <!-- Philosophy - Updated rounded corner -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 mb-12">
+                         <!-- Heading uses Poppins Bold -->
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Local, Fresh, Sustainable</h3>
+                        <p class="text-lg text-gray-600 mb-6">Our menu is a celebration of Peru's incredible bounty. We work directly with local farmers and fishermen to source the freshest ingredients daily. Expect vibrant ceviches, healthy poke bowls, hearty post-surf breakfasts, and delicious tropical cocktails.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
+                            <div>
+                                <strong class="font-medium text-gray-900">Breakfast</strong>
+                                <p>Smoothie bowls, avocado toast, Peruvian coffee, and fresh-squeezed juices. Included with your stay!</p>
+                            </div>
+                            <div>
+                                <strong class="font-medium text-gray-900">Lunch & Dinner</strong>
+                                <p>Fresh ceviche, fish tacos, quinoa salads, lomo saltado, and wood-fired pizzas.</p>
+                            </div>
+                            <div>
+                                <strong class="font-medium text-gray-900">The Bar</strong>
+                                <p>Pisco sours, chilcanos, craft beers, and healthy non-alcoholic elixirs.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Gallery -->
-                 <!-- Heading uses Poppins Bold -->
-                <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Gallery</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                     <!-- Updated rounded corner -->
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Fresh+Ceviche" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+1'" alt="Fresh ceviche dish" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
-                     <!-- Updated rounded corner -->
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Pisco+Sour" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+2'" alt="Pisco sour cocktail" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
-                     <!-- Updated rounded corner -->
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Restaurant+Ambiance" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+3'" alt="Restaurant ambiance at sunset" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
-                     <!-- Updated rounded corner -->
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Smoothie+Bowl" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+4'" alt="Breakfast smoothie bowl" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                    <!-- Gallery -->
+                     <!-- Heading uses Poppins Bold -->
+                    <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Gallery</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                         <!-- Updated rounded corner -->
+                        <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Fresh+Ceviche" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+1'" alt="Fresh ceviche dish" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                         <!-- Updated rounded corner -->
+                        <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Pisco+Sour" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+2'" alt="Pisco sour cocktail" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                         <!-- Updated rounded corner -->
+                        <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Restaurant+Ambiance" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+3'" alt="Restaurant ambiance at sunset" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                         <!-- Updated rounded corner -->
+                        <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Smoothie+Bowl" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+4'" alt="Breakfast smoothie bowl" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                    </div>
                 </div>
             </div>
         </section>
@@ -908,38 +1005,54 @@
         <!-- =================== -->
         <!-- LOCATION PAGE    -->
         <!-- =================== -->
-        <section id="location" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-16">Find Us in Paradise</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Map -->
-                    <div>
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Location</h3>
-                         <!-- Updated rounded corner -->
-                        <div class="bg-gray-200 rounded-xl shadow-md h-96 flex items-center justify-center text-gray-500">
-                            <!-- Google Maps iframe: Replace with your embed code -->
-                            <p>Google Map Placeholder</p>
-                        </div>
-                    </div>
-                    <!-- How to Get Here -->
-                    <div>
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">How to Get Here</h3>
-                        <p class="text-gray-600 mb-6">We are located just north of Mancora town, in the peaceful Las Pocitas beach area. We are happy to arrange airport transfers.</p>
-                        <ul class="space-y-4 text-gray-700">
-                            <li><strong class="font-medium text-gray-900">By Air:</strong> The closest airports are Talara (TAL - 1.5 hours), Tumbes (TBP - 2 hours), and Piura (PIU - 3 hours). All accept daily flights from Lima (LIM).</li>
-                            <li><strong class="font-medium text-gray-900">By Bus:</strong> Luxury buses run daily from Lima, Guayaquil (Ecuador), and other major cities in Peru.</li>
-                        </ul>
+        <section id="location" class="bg-white">
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/f59e0b/FFFFFF?text=Location" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Aerial view of Mancora coastline" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Find Us in Paradise
+                    </h2>
+                </div>
+            </div>
 
-                         <!-- Heading uses Poppins SemiBold -->
-                        <h3 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">What's Nearby?</h3>
-                        <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                            <li>Mancora Town (Restaurants & Nightlife) - 5 min drive</li>
-                            <li>Los Organos (Whale Watching) - 15 min drive</li>
-                            <li>Cabo Blanco (Historic Fishing) - 30 min drive</li>
-                        </ul>
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Map -->
+                        <div>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Location</h3>
+                             <!-- Updated rounded corner -->
+                            <div class="bg-gray-200 rounded-xl shadow-md h-96 flex items-center justify-center text-gray-500">
+                                <!-- Google Maps iframe: Replace with your embed code -->
+                                <p>Google Map Placeholder</p>
+                            </div>
+                        </div>
+                        <!-- How to Get Here -->
+                        <div>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">How to Get Here</h3>
+                            <p class="text-gray-600 mb-6">We are located just north of Mancora town, in the peaceful Las Pocitas beach area. We are happy to arrange airport transfers.</p>
+                            <ul class="space-y-4 text-gray-700">
+                                <li><strong class="font-medium text-gray-900">By Air:</strong> The closest airports are Talara (TAL - 1.5 hours), Tumbes (TBP - 2 hours), and Piura (PIU - 3 hours). All accept daily flights from Lima (LIM).</li>
+                                <li><strong class="font-medium text-gray-900">By Bus:</strong> Luxury buses run daily from Lima, Guayaquil (Ecuador), and other major cities in Peru.</li>
+                            </ul>
+
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">What's Nearby?</h3>
+                            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                                <li>Mancora Town (Restaurants & Nightlife) - 5 min drive</li>
+                                <li>Los Organos (Whale Watching) - 15 min drive</li>
+                                <li>Cabo Blanco (Historic Fishing) - 30 min drive</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -948,64 +1061,80 @@
         <!-- =================== -->
         <!-- CONTACT PAGE    -->
         <!-- =================== -->
-        <section id="contact" class="py-20 bg-gray-50"> 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <!-- Heading uses Poppins Black -->
-                <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Get in Touch</h2>
-                <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Have questions? We're here to help. Send us a message, and our team will get back to you as soon as possible.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Contact Form - Updated rounded corner -->
-                    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 rounded-xl shadow-lg">
-                        <input type="hidden" name="form-name" value="contact-form" />
-                        <p class="hidden">
-                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                        </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <section id="contact" class="bg-gray-50"> 
+            <!-- Page Banner -->
+            <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
+                <img src="https://placehold.co/1600x400/3b82f6/FFFFFF?text=Contact" 
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/1600x400/333/FFF?text=Image+Missing'"
+                     alt="Desk with phone and email icons" 
+                     class="absolute inset-0 w-full h-full object-cover opacity-50">
+                <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
+                    <h2 class="text-4xl md:text-5xl font-black hero-text-shadow uppercase tracking-wider">
+                        Get in Touch
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Have questions? We're here to help. Send us a message, and our team will get back to you as soon as possible.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Contact Form - Updated rounded corner -->
+                        <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 rounded-xl shadow-lg">
+                            <input type="hidden" name="form-name" value="contact-form" />
+                            <p class="hidden">
+                                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                                     <!-- Updated rounded corner -->
+                                    <input type="text" name="first-name" id="first-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                                     <!-- Updated rounded corner -->
+                                    <input type="text" name="last-name" id="last-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                     <!-- Updated rounded corner -->
+                                    <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                     <!-- Updated rounded corner -->
+                                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"></textarea>
+                                </div>
+                            </div>
+                             <!-- Updated rounded corner -->
+                            <button type="submit" class="mt-6 w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-xl text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                                Send Message
+                            </button>
+                        </form>
+                        <!-- Contact Info -->
+                        <div class="space-y-6">
                             <div>
-                                <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
-                                 <!-- Updated rounded corner -->
-                                <input type="text" name="first-name" id="first-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-xl font-semibold text-gray-900">Phone & WhatsApp</h3>
+                                 <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="text-lg text-gray-600 hover:text-cyan-700">+51 987 654 321 (Click to chat!)</a>
                             </div>
                             <div>
-                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                                 <!-- Updated rounded corner -->
-                                <input type="text" name="last-name" id="last-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+                                 <a href="mailto:reservas@ecohousemancora.com" class="text-lg text-gray-600 hover:text-cyan-700">reservas@ecohousemancora.com</a>
                             </div>
-                            <div class="sm:col-span-2">
-                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                 <!-- Updated rounded corner -->
-                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                            <div>
+                                <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                 <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-xl font-semibold text-gray-900">Address</h3>
+                                 <p class="text-lg text-gray-600">Antigua Panamericana Norte Km. 1215<br>Las Pocitas, Mancora, Peru</p>
                             </div>
-                            <div class="sm:col-span-2">
-                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                                 <!-- Updated rounded corner -->
-                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"></textarea>
-                            </div>
-                        </div>
-                         <!-- Updated rounded corner -->
-                        <button type="submit" class="mt-6 w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-xl text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
-                            Send Message
-                        </button>
-                    </form>
-                    <!-- Contact Info -->
-                    <div class="space-y-6">
-                        <div>
-                            <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-xl font-semibold text-gray-900">Phone & WhatsApp</h3>
-                             <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="text-lg text-gray-600 hover:text-cyan-700">+51 987 654 321 (Click to chat!)</a>
-                        </div>
-                        <div>
-                            <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-xl font-semibold text-gray-900">Email</h3>
-                             <a href="mailto:reservas@ecohousemancora.com" class="text-lg text-gray-600 hover:text-cyan-700">reservas@ecohousemancora.com</a>
-                        </div>
-                        <div>
-                            <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                             <!-- Heading uses Poppins SemiBold -->
-                            <h3 class="text-xl font-semibold text-gray-900">Address</h3>
-                             <p class="text-lg text-gray-600">Antigua Panamericana Norte Km. 1215<br>Las Pocitas, Mancora, Peru</p>
                         </div>
                     </div>
                 </div>
@@ -1013,117 +1142,16 @@
         </section>
 
         <!-- ======================================== -->
-        <!-- These are the other pages we built, wrapped in <section> tags -->
+        <!-- REMOVED: GALLERY Page -->
         <!-- ======================================== -->
 
-        <!-- GALLERY Page - REMOVED -->
-        
+        <!-- ======================================== -->
+        <!-- REMOVED: FAQ Page -->
+        <!-- ======================================== -->
 
-        <!-- FAQ Page (From Footer) -->
-        <section id="faq-page" class="page-content py-20 md:py-28">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                     <!-- Heading uses Poppins Bold -->
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Frequently Asked Questions</h1>
-                </div>
-                
-                <div class="space-y-6">
-                     <!-- Updated rounded corner -->
-                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
-                         <!-- Summary text uses Poppins Semibold -->
-                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3"> 
-                            What's the best time to visit?
-                            <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </summary>
-                        <p class="mt-4 text-gray-600">
-                            For **surfing**, swell is consistent year-round (April-Nov for bigger waves). For **kitesurfing**, the wind season is May to December. For pure sunshine, December-March is hottest.
-                        </p>
-                    </details>
-                     <!-- Updated rounded corner -->
-                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
-                         <!-- Summary text uses Poppins Semibold -->
-                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
-                            How do I book surf/kite packages?
-                            <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </summary>
-                        <p class="mt-4 text-gray-600">
-                            Easy! First, book your accommodation using the "Book Now" button. During the checkout process in our booking engine (Guesty), you will see all available surf lessons, kite courses, and gear rentals listed as optional "add-ons" or "extras" that you can add to your reservation before completing the payment.
-                        </p>
-                    </details>
-                    <!-- Updated rounded corner -->
-                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
-                         <!-- Summary text uses Poppins Semibold -->
-                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
-                            How do I get from the airport?
-                            <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </summary>
-                        <p class="mt-4 text-gray-600">
-                            We can arrange a trusted private taxi to pick you up from Talara (TAL), Tumbes (TBP), or Piura (PIU) airports. Please contact us with your flight details after booking to coordinate your transfer. Rates vary depending on the airport.
-                        </JSON>
-                    </details>
-                    <!-- Updated rounded corner -->
-                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
-                         <!-- Summary text uses Poppins Semibold -->
-                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
-                            Is breakfast included?
-                            <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </summary>
-                        <p class="mt-4 text-gray-600">
-                            Yes! A delicious, healthy breakfast featuring local fruits, granola, eggs, fresh juices, and Peruvian coffee is included for all guests staying with us.
-                        </p>
-                    </details>
-                     <!-- Add more FAQs as needed -->
-                </div>
-            </div>
-        </section>
-
-        <!-- PRIVACY Page (From Footer) -->
-        <section id="privacy-page" class="page-content py-20 md:py-28">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <div class="text-center mb-16">
-                     <!-- Heading uses Poppins Bold -->
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Privacy Policy & Terms</h1>
-                </div>
-                <!-- Applying Poppins to prose headings via CSS rule -->
-                <div class="prose prose-lg max-w-none text-gray-600">
-                    <h2 class="text-2xl font-semibold text-gray-900">Privacy Policy</h2>
-                    <p>
-                        <!-- Add your actual privacy policy text here -->
-                        Placeholder text for your privacy policy. Explain:
-                    </p>
-                    <ul>
-                        <li>What personal information you collect (e.g., name, email via contact form, booking details via Guesty).</li>
-                        <li>How you use this information (e.g., to process bookings, respond to inquiries).</li>
-                        <li>How you protect visitor data.</li>
-                        <li>Your policy on using cookies (mention necessary cookies for booking, optional for analytics if used).</li>
-                         <li>Third-party disclosure (e.g., Guesty for bookings).</li>
-                         <li>User rights (access, correction, deletion).</li>
-                    </ul>
-                    <h2 class="text-2xl font-semibold text-gray-900 mt-12">Terms & Conditions</h2>
-                    <p>
-                        <!-- Add your actual terms and conditions text here -->
-                        Placeholder text for your terms and conditions. Include:
-                    </p>
-                    <ul>
-                        <li>**Booking & Payment Policy:** How bookings are confirmed, required deposits, accepted payment methods, currency.</li>
-                        <li>**Cancellation & Refund Policy:** Specific timelines for free cancellation, penalties for late cancellation or no-shows.</li>
-                        <li>**Check-in / Check-out Times:** State your standard times.</li>
-                        <li>**Guest Conduct:** Rules regarding noise, smoking, property damage, illegal activities.</li>
-                        <li>**Liability:** Disclaimer of liability for personal injury, loss, or damage to property.</li>
-                        <li>**Age Restrictions:** Any minimum age requirements.</li>
-                         <li>**Pet Policy:** State if pets are allowed and under what conditions.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- ======================================== -->
+        <!-- REMOVED: PRIVACY Page -->
+        <!-- ======================================== -->
 
     </main>
 
@@ -1169,7 +1197,7 @@
                             <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
                                 <span class="sr-only">Instagram</span>
                                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.067-.06-1.407-.06-4.123v-.08c0-2.643.012-2.987.06-4.043.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.067-.06-1.407-.06-4.123v-.08c0-2.643.012-2.987.06-4.043.049 1.064.218 1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882-.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
                                 </svg>
                             </a>
                             <!-- Facebook Icon -->
@@ -1180,8 +1208,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li><a href="#faq-page" class="nav-link text-sm hover:text-white" data-page="faq-page">FAQ</a></li>
-                        <li><a href="#privacy-page" class="nav-link text-sm hover:text-white" data-page="privacy-page">Privacy & Terms</a></li>
+                        <!-- Removed FAQ and Privacy links -->
                     </ul>
                 </div>
             </div>
@@ -1243,7 +1270,7 @@
 
             // --- SPA Navigation Logic ---
             const mainContent = document.querySelector('main');
-            const allPages = mainContent ? mainContent.querySelectorAll('section') : []; 
+            const allPages = mainContent ? mainContent.querySelectorAll('main > section') : []; // Select only direct children
             const allNavLinks = document.querySelectorAll('.nav-link, .nav-link-mobile'); 
 
             function updateActiveNavLinks(targetPageId) {
@@ -1272,25 +1299,26 @@
 
                 if (allPages.length > 0) {
                     allPages.forEach(page => {
-                        if (page.id === targetPageId) {
+                        // Check if page is a direct child of main
+                        if (page.parentElement === mainContent && page.id === targetPageId) {
                             page.classList.add('active');
                             pageFound = true;
-                        } else {
+                        } else if (page.parentElement === mainContent) {
                             page.classList.remove('active');
                         }
                     });
                 } else {
-                     console.error("No page sections found within <main> tag.");
+                     console.error("No page sections found directly within <main> tag.");
                      return; 
                 }
 
                 if (!pageFound) {
                     const homePage = document.getElementById('home');
-                    if (homePage) {
+                    if (homePage && homePage.parentElement === mainContent) {
                         homePage.classList.add('active');
                          updateActiveNavLinks('home'); // Update nav links if falling back to home
                     } else {
-                         console.error("Default homepage section with id='home' not found.");
+                         console.error("Default homepage section with id='home' not found directly within <main>.");
                     }
                 } else {
                     updateActiveNavLinks(targetPageId);
@@ -1306,14 +1334,21 @@
                     const pageId = link.dataset.page || (href && href.startsWith('#') ? href.substring(1) : null);
 
                     if (pageId) {
-                        e.preventDefault(); 
-                        // Only change hash if it's different to prevent redundant loads/flicker
-                        if(window.location.hash !== `#${pageId}`) {
-                            window.location.hash = pageId; 
-                        } else {
-                            // If hash is already correct, ensure page is shown (useful for initial load edge cases)
-                             showPage(pageId);
-                        }
+                         // Check if the element exists before navigating
+                         const targetElement = document.getElementById(pageId);
+                         if (targetElement) {
+                            e.preventDefault(); 
+                            // Only change hash if it's different to prevent redundant loads/flicker
+                            if(window.location.hash !== `#${pageId}`) {
+                                window.location.hash = pageId; 
+                            } else {
+                                // If hash is already correct, ensure page is shown (useful for initial load edge cases)
+                                showPage(pageId);
+                            }
+                         } else {
+                             // Link is for a page that no longer exists (e.g., gallery), let default behavior (if any) proceed or just ignore
+                             console.warn(`Navigation link clicked for non-existent page: #${pageId}`);
+                         }
                     }
                     
                     if (mobileMenuButton && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
@@ -1325,7 +1360,14 @@
              // Handle Hash Changes for SPA Pages
              function handleHashChange() {
                 const hash = window.location.hash.substring(1);
-                 showPage(hash || 'home'); 
+                 // Only show page if it exists
+                 if(document.getElementById(hash || 'home')) {
+                    showPage(hash || 'home'); 
+                 } else {
+                    // If hash links to a non-existent page (e.g., old gallery link), show home
+                    showPage('home');
+                    window.location.hash = 'home'; // Optionally reset hash to home
+                 }
              }
 
             window.addEventListener('hashchange', handleHashChange);
@@ -1449,3 +1491,4 @@
 
 </body>
 </html>
+
