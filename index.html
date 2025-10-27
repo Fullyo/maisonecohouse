@@ -5,20 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco House Mancora - Surf, Kitesurf & Yoga Hotel</title>
     <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter font -->
+    <script src="https://cdn.tailwindcss.com" defer></script> <!-- Added defer -->
+    <!-- Load Inter (body) and Poppins (headings) fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700;900&display=swap" rel="stylesheet">
     <!-- Load Feather Icons (for location icons) -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons" defer></script> <!-- Added defer -->
     <style>
         /* Base styles */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* Keep Inter for body */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+        /* Apply Poppins to headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Default bold for Poppins headings */
+        }
+        /* Make Hero heading extra bold */
+         #home h2.font-black {
+             font-weight: 900; /* Use Poppins Black for hero */
+         }
+         /* Make section titles bold */
+         main h2, footer h3 {
+            font-weight: 700; /* Poppins Bold */
+         }
+         /* Make card/item titles semi-bold */
+         main h3, main h4 {
+            font-weight: 600; /* Poppins SemiBold */
+         }
+
 
         /* Active nav link style */
         .nav-link.active {
@@ -89,6 +108,7 @@
                     <div class="flex-shrink-0">
                         <!-- Use data-page attribute for JS navigation -->
                         <a href="#home" class="nav-link" data-page="home">
+                            <!-- Logo Text uses Poppins now -->
                             <h1 class="text-2xl font-bold text-gray-900">Eco House <span class="text-cyan-700">Mancora</span></h1>
                         </a>
                     </div>
@@ -106,9 +126,9 @@
                         <a href="#gallery-page" class="nav-link text-gray-600 hover:text-cyan-700 px-3 py-2 rounded-md text-sm font-medium" data-page="gallery-page">Gallery</a>
                     </div>
 
-                    <!-- Book Now (Desktop) - Link Removed -->
+                    <!-- Book Now (Desktop) - Updated rounded corner -->
                     <div class="hidden md:block">
-                        <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-150 ease-in-out">
+                        <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-150 ease-in-out">
                             Book Now
                         </a>
                     </div>
@@ -141,9 +161,9 @@
                     <a href="#contact" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-700 hover:bg-gray-50" data-page="contact">Contact</a>
                     <a href="#gallery-page" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cyan-700 hover:bg-gray-50" data-page="gallery-page">Gallery</a>
                 </div>
-                <!-- Book Now (Mobile) - Link Removed -->
+                <!-- Book Now (Mobile) - Updated rounded corner -->
                 <div class="px-5 py-6">
-                    <a href="#" class="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-150 ease-in-out">
+                    <a href="#" class="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-150 ease-in-out">
                         Book Now
                     </a>
                 </div>
@@ -160,16 +180,18 @@
         <section id="home" class="active"> <!-- NOTE: The `active` class makes this section visible on load -->
             <!-- 1. Hero Section -->
             <div class="relative bg-gray-900 h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
-                <!-- Cloudinary Image URL -->
+                <!-- Added loading="lazy" -->
                 <img src="https://placehold.co/1600x900/000000/FFFFFF?text=Eco+House+Hero+Image+(Surf/Yoga/Kite)" 
+                     loading="lazy"
                      onerror="this.src='https://placehold.co/1600x900/333/FFF?text=Hero+Image+Missing'"
                      alt="Aerial view of Eco House Mancora with surfing and yoga" 
                      class="absolute inset-0 w-full h-full object-cover opacity-60">
                 <div class="relative z-10 p-4">
+                    <!-- Heading uses Poppins Black -->
                     <h2 class="text-4xl md:text-6xl font-black hero-text-shadow uppercase tracking-wider">Your Eco-Friendly Escape</h2>
                     <p class="mt-4 text-xl md:text-2xl font-light hero-text-shadow max-w-3xl mx-auto">Surf, Kitesurf, and Yoga on the stunning coast of Mancora, Peru. Your adventure begins at the Eco House.</p>
-                     <!-- Check Availability Button - Link Removed -->
-                    <a href="#" class="mt-8 inline-block bg-cyan-700 text-white text-lg font-medium px-10 py-4 rounded-lg shadow-lg hover:bg-cyan-800 transition duration-300">
+                     <!-- Check Availability Button - Updated rounded corner -->
+                    <a href="#" class="mt-8 inline-block bg-cyan-700 text-white text-lg font-medium px-10 py-4 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
                         Check Availability
                     </a>
                 </div>
@@ -179,42 +201,50 @@
             <!-- 2. 3 Pillars Section -->
             <div class="py-20 bg-gray-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <!-- UPDATED TITLE -->
+                    <!-- Heading uses Poppins Bold -->
                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Stay, Play, Unwind: Your Mancora Escape</h2> 
-                    <!-- ADDED SUBTITLE -->
                     <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">
                         Discover world-class surf, kitesurfing, and yoga from our unique boutique hotel.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Surf -->
-                        <div class="group rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Surf - Updated rounded corner -->
+                        <div class="group rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                             <!-- Added loading="lazy" -->
                             <img src="https://placehold.co/600x400/0891b2/FFFFFF?text=Surf+Session" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/600x400/0891b2/FFF?text=Surf'"
                                  alt="Surfer on a wave in Mancora" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
-                                <h3 class="text-2xl font-bold mb-2">Surf</h3>
+                                <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-2xl font-semibold mb-2">Surf</h3>
                                 <p class="text-gray-600 mb-4">Ride Mancora's legendary left-hand point breaks. From mellow beginner waves to peeling perfection, we offer lessons, rentals, and expert guiding.</p>
                                 <a href="#surf" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="surf">Learn More &rarr;</a>
                             </div>
                         </div>
-                        <!-- Kitesurf -->
-                        <div class="group rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Kitesurf - Updated rounded corner -->
+                        <div class="group rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                             <!-- Added loading="lazy" -->
                             <img src="https://placehold.co/600x400/db2777/FFFFFF?text=Kitesurf+Sunset" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/600x400/db2777/FFF?text=Kite'"
                                  alt="Kitesurfer in the air at sunset" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
-                                <h3 class="text-2xl font-bold mb-2">Kitesurf</h3>
+                                <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-2xl font-semibold mb-2">Kitesurf</h3>
                                 <p class="text-gray-600 mb-4">Harness the consistent winds of Mancora Bay, a world-class kitesurfing destination. IKO certified lessons and rentals available for all levels.</p>
                                 <a href="#kitesurf" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="kitesurf">Learn More &rarr;</a>
                             </div>
                         </div>
-                        <!-- Yoga -->
-                        <div class="group rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- Yoga - Updated rounded corner -->
+                        <div class="group rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                             <!-- Added loading="lazy" -->
                             <img src="https://placehold.co/600x400/16a34a/FFFFFF?text=Yoga+Shala" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/600x400/16a34a/FFF?text=Yoga'"
                                  alt="Yoga class in an open-air shala" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white">
-                                <h3 class="text-2xl font-bold mb-2">Yoga</h3>
+                                <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-2xl font-semibold mb-2">Yoga</h3>
                                 <p class="text-gray-600 mb-4">Connect body and soul in our serene, open-air shala overlooking the Pacific. Daily classes and space for your personal practice await.</p>
                                 <a href="#yoga" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="yoga">Learn More &rarr;</a>
                             </div>
@@ -223,7 +253,7 @@
                 </div>
             </div>
 
-            <!-- 3. The Eco House Intro - ADDED SUBTLE BG -->
+            <!-- 3. The Eco House Intro - Updated BG -->
             <div class="py-20 bg-green-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -234,12 +264,15 @@
                                 </svg>                                
                                 Our Philosophy
                             </span>
+                            <!-- Heading uses Poppins Bold -->
                             <h2 class="text-3xl font-bold text-gray-900 mt-4 mb-4">More Than a Hotel. An Eco House.</h2>
                             <p class="text-lg text-gray-600 mb-6">We built Eco House Mancora with sustainability at our core, creating a unique boutique experience. Our construction uses recycled and local materials, minimizing impact while maximizing your connection with nature. We believe in conscious travel, where adventure and responsibility go hand-in-hand.</p>
                             <a href="#sustainability" class="nav-link text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="sustainability">Discover Our Eco-Practices &rarr;</a>
                         </div>
-                        <div class="rounded-lg shadow-xl overflow-hidden">
+                         <!-- Updated rounded corner, added loading="lazy" -->
+                        <div class="rounded-xl shadow-xl overflow-hidden">
                             <img src="https://placehold.co/600x500/14b8a6/FFFFFF?text=Eco-Friendly+Construction" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/600x500/14b8a6/FFF?text=Eco+Build'"
                                  alt="Eco-friendly construction of the hotel" class="w-full h-full object-cover">
                         </div>
@@ -247,48 +280,57 @@
                 </div>
             </div>
 
-            <!-- 4. Featured Rooms Section -->
-            <div class="py-20 bg-white">
+            <!-- 4. Featured Rooms Section - Updated BG -->
+            <div class="py-20 bg-amber-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Heading uses Poppins Bold -->
                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Your Coastal Sanctuary</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Featured Room 1 -->
-                        <div class="group rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <!-- Featured Room 1 - Updated rounded corner -->
+                        <div class="group rounded-xl shadow-lg overflow-hidden flex flex-col">
+                             <!-- Added loading="lazy" -->
                             <img src="https://placehold.co/800x600/0e7490/FFFFFF?text=Ocean+View+Suite" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/800x600/CCC/FFF?text=Room+1'"
                                  alt="Ocean View Suite" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white flex-grow">
-                                <h3 class="text-2xl font-bold mb-2">Ocean View Suite</h3>
+                                <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-2xl font-semibold mb-2">Ocean View Suite</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Wake up to panoramic Pacific views from your private balcony. King bed, ensuite, pure bliss.</p>
                                 <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
                             </div>
                         </div>
-                        <!-- Featured Room 2 -->
-                        <div class="group rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <!-- Featured Room 2 - Updated rounded corner -->
+                        <div class="group rounded-xl shadow-lg overflow-hidden flex flex-col">
+                             <!-- Added loading="lazy" -->
                             <img src="https://placehold.co/800x600/10b981/FFFFFF?text=Garden+Bungalow" 
+                                 loading="lazy"
                                  onerror="this.src='https://placehold.co/800x600/CCC/FFF?text=Room+2'"
                                  alt="Garden Bungalow" class="w-full h-64 object-cover">
                             <div class="p-6 bg-white flex-grow">
-                                <h3 class="text-2xl font-bold mb-2">Garden Bungalow</h3>
+                                <!-- Heading uses Poppins SemiBold -->
+                                <h3 class="text-2xl font-semibold mb-2">Garden Bungalow</h3>
                                 <p class="text-gray-600 mb-4 flex-grow">Your private retreat nestled in our lush gardens. Queen bed, terrace, perfect tranquility.</p>
                                 <a href="#accommodation" class="nav-link font-medium text-cyan-700 hover:text-cyan-900" data-page="accommodation">View Details &rarr;</a>
                             </div>
                         </div>
                     </div>
                     <div class="text-center mt-12">
-                         <a href="#accommodation" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition duration-150 ease-in-out" data-page="accommodation">
+                         <!-- Updated rounded corner -->
+                         <a href="#accommodation" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-xl shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition duration-150 ease-in-out" data-page="accommodation">
                              See All Accommodations
                          </a>
                     </div>
                 </div>
             </div>
 
-             <!-- 5. Testimonial Slider - MOVED UP & STRUCTURED -->
+             <!-- 5. Testimonial Slider -->
             <div class="py-20 bg-cyan-800 text-white overflow-hidden"> 
                 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+                    <!-- Heading uses Poppins Bold -->
                     <h2 class="text-3xl font-bold mb-8">What Our Guests Say</h2>
                     
-                    <div id="testimonial-slider" class="relative min-h-[150px] sm:min-h-[180px]"> <!-- Container for slides, adjusted min height -->
+                    <div id="testimonial-slider" class="relative min-h-[150px] sm:min-h-[180px]"> 
                         <!-- Slide 1 -->
                         <div class="testimonial-slide active-slide"> 
                             <blockquote class="text-xl md:text-2xl font-light italic leading-relaxed">
@@ -352,18 +394,19 @@
                     </div>
 
                     <!-- Slider Arrows -->
-                    <button id="prev-testimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> <!-- Added z-index -->
+                    <button id="prev-testimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> 
                         <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
-                    <button id="next-testimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> <!-- Added z-index -->
+                    <button id="next-testimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white/50 hover:text-white focus:outline-none z-10"> 
                         <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- 6. Enhanced Location Highlight Section -->
-            <div class="py-20 bg-gray-50 text-center">
+            <!-- 6. Enhanced Location Highlight Section - Updated BG -->
+            <div class="py-20 bg-amber-50 text-center"> 
                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                   <!-- Heading uses Poppins Bold -->
                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Perfectly Placed for Peace & Play</h2>
                    <p class="text-lg text-gray-600 mb-10">
                        Nestled in tranquil Las Pocitas, we offer a peaceful retreat just steps from the action.
@@ -371,37 +414,45 @@
                    <!-- Location Icons -->
                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
                        <div class="flex flex-col items-center">
-                            <i data-feather="wind" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Wind for Kitesurf -->
+                            <i data-feather="wind" class="w-10 h-10 text-cyan-700 mb-2"></i> 
+                            <!-- Heading uses Poppins SemiBold -->
                             <h4 class="font-semibold text-gray-800">Kitesurf Spot</h4>
                             <p class="text-gray-600">Right Out Front (10 steps!)</p>
                        </div>
                        <div class="flex flex-col items-center">
-                            <i data-feather="anchor" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Anchor (waves/surf) -->
+                            <i data-feather="anchor" class="w-10 h-10 text-cyan-700 mb-2"></i> 
+                            <!-- Heading uses Poppins SemiBold -->
                             <h4 class="font-semibold text-gray-800">Main Surf Break</h4>
                             <p class="text-gray-600">Easy 5-Min Walk</p>
                        </div>
                        <div class="flex flex-col items-center">
-                            <i data-feather="coffee" class="w-10 h-10 text-cyan-700 mb-2"></i> <!-- Feather Icon: Coffee for Cafes -->
+                            <i data-feather="coffee" class="w-10 h-10 text-cyan-700 mb-2"></i> 
+                            <!-- Heading uses Poppins SemiBold -->
                             <h4 class="font-semibold text-gray-800">Mancora Town</h4>
                             <p class="text-gray-600">Short Stroll to Cafes</p>
                        </div>
                    </div>
-                   <a href="#location" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg shadow-sm text-gray-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out" data-page="location">
+                    <!-- Updated rounded corner -->
+                   <a href="#location" class="nav-link inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-xl shadow-sm text-gray-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out" data-page="location">
                        Explore the Area
                    </a>
                </div>
             </div>
 
             <!-- 7. Restaurant Teaser Section - MINIMIZED -->
-            <div class="py-20 bg-white"> <!-- Standard Background -->
+            <div class="py-20 bg-white"> 
                  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                         <div class="md:col-span-1 rounded-lg shadow-xl overflow-hidden"> <!-- Smaller Image -->
+                         <!-- Updated rounded corner -->
+                         <div class="md:col-span-1 rounded-xl shadow-xl overflow-hidden"> 
+                              <!-- Added loading="lazy" -->
                              <img src="https://placehold.co/600x400/d946ef/FFFFFF?text=Fresh+Local+Food" 
+                                  loading="lazy"
                                   onerror="this.src='https://placehold.co/600x400/d946ef/FFF?text=Food+Teaser'"
                                   alt="Delicious healthy food served at the restaurant" class="w-full h-full object-cover aspect-[3/2]">
                          </div>
-                         <div class="md:col-span-2"> <!-- Text takes more space -->
+                         <div class="md:col-span-2"> 
+                             <!-- Heading uses Poppins Bold -->
                              <h2 class="text-3xl font-bold text-gray-900 mb-4">Fresh & Local Dining On-Site</h2>
                              <p class="text-lg text-gray-600 mb-6">
                                  Fuel your adventures at Nourish, our renowned restaurant known for blending fresh Peruvian ingredients with healthy international flavors.
@@ -415,40 +466,20 @@
             <!-- 8. Expanded Gallery Section -->
             <div class="py-20 bg-gray-50"> 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Heading uses Poppins Bold -->
                     <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">A Glimpse of Your Sanctuary</h2>
-                    <!-- Adjusted grid for more images -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"> <!-- Grid changed to 5 cols on large screens -->
-                        <img src="https://placehold.co/600x450/D8DEE9/4C566A?text=Ambiance+1" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Relaxing ambiance at Eco House Mancora" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                        <img src="https://placehold.co/600x450/E5E9F0/4C566A?text=Beach+View" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="View of the beach from the hotel" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                        <img src="https://placehold.co/600x450/ECEFF4/4C566A?text=Garden+Space" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Lush garden area at the hotel" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                        <img src="https://placehold.co/600x450/0891b2/FFFFFF?text=Surf+Lifestyle" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Surfing lifestyle shot near Mancora" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Action" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Kitesurfing action shot" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <img src="https://placehold.co/600x450/16a34a/FFFFFF?text=Yoga+Pose" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Yoga pose in the shala" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <img src="https://placehold.co/600x450/d946ef/FFFFFF?text=Sunset+Cocktail" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Cocktail at sunset" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <img src="https://placehold.co/600x450/f59e0b/FFFFFF?text=Room+Detail" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Detail shot of a room's decor" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <!-- Added 2 more images for 10 total -->
-                         <img src="https://placehold.co/600x450/3b82f6/FFFFFF?text=Pool+Area" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Pool area at Eco House" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
-                         <img src="https://placehold.co/600x450/ef4444/FFFFFF?text=Mancora+Town" 
-                             onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'"
-                             alt="Vibrant street in Mancora town" class="rounded-lg shadow-md w-full h-full object-cover aspect-[4/3]">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"> 
+                         <!-- Updated rounded corner, added loading="lazy" -->
+                        <img src="https://placehold.co/600x450/D8DEE9/4C566A?text=Ambiance+1" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Relaxing ambiance at Eco House Mancora" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                        <img src="https://placehold.co/600x450/E5E9F0/4C566A?text=Beach+View" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="View of the beach from the hotel" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                        <img src="https://placehold.co/600x450/ECEFF4/4C566A?text=Garden+Space" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Lush garden area at the hotel" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                        <img src="https://placehold.co/600x450/0891b2/FFFFFF?text=Surf+Lifestyle" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Surfing lifestyle shot near Mancora" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Action" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Kitesurfing action shot" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/16a34a/FFFFFF?text=Yoga+Pose" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Yoga pose in the shala" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/d946ef/FFFFFF?text=Sunset+Cocktail" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Cocktail at sunset" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/f59e0b/FFFFFF?text=Room+Detail" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Detail shot of a room's decor" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/3b82f6/FFFFFF?text=Pool+Area" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Pool area at Eco House" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
+                         <img src="https://placehold.co/600x450/ef4444/FFFFFF?text=Mancora+Town" loading="lazy" onerror="this.src='https://placehold.co/600x450/CCC/FFF?text=Image'" alt="Vibrant street in Mancora town" class="rounded-xl shadow-md w-full h-full object-cover aspect-[4/3]">
                     </div>
                      <div class="text-center mt-8">
                          <a href="#gallery-page" class="nav-link inline-block text-lg font-medium text-cyan-700 hover:text-cyan-900" data-page="gallery-page">View Full Gallery &rarr;</a>
@@ -457,26 +488,27 @@
             </div>
 
             <!-- 9. Dual Call to Action - ENHANCED -->
-            <div class="relative py-24 bg-gray-800 text-center"> <!-- Changed BG, Added Padding -->
-                 <!-- Background Image Placeholder -->
+            <div class="relative py-24 bg-gray-800 text-center"> 
+                 <!-- Background Image Placeholder - Added loading="lazy" -->
                  <img src="https://placehold.co/1600x500/000000/FFFFFF?text=Mancora+Sunset+View" 
+                      loading="lazy"
                       onerror="this.src='https://placehold.co/1600x500/333/FFF?text=CTA+Background'"
                       alt="Sunset over the ocean in Mancora"
-                      class="absolute inset-0 w-full h-full object-cover opacity-40"> <!-- Adjusted Opacity -->
+                      class="absolute inset-0 w-full h-full object-cover opacity-40"> 
                  
                  <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <!-- New Title -->
+                      <!-- Heading uses Poppins Bold -->
                      <h2 class="text-4xl font-bold text-white mb-4 hero-text-shadow">Your Mancora Adventure Starts Here</h2> 
-                      <!-- New Text -->
                      <p class="text-xl text-cyan-100 mb-8 hero-text-shadow">
                           Find your perfect eco-friendly room and start planning your surf, kite, or yoga journey on Peru's stunning coast. Our team is ready to help.
                      </p>
                      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                          <!-- Adjusted Button Styles -->
-                         <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-transparent text-lg font-medium rounded-lg shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 transition duration-150 ease-in-out">
+                          <!-- Updated rounded corner -->
+                         <a href="#" class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-transparent text-lg font-medium rounded-xl shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 transition duration-150 ease-in-out">
                              Book Your Stay
                          </a>
-                         <a href="#contact" class="nav-link inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-white text-lg font-medium rounded-lg shadow-sm text-white bg-black/20 hover:bg-black/40 transition duration-150 ease-in-out" data-page="contact">
+                          <!-- Updated rounded corner -->
+                         <a href="#contact" class="nav-link inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 border border-white text-lg font-medium rounded-xl shadow-sm text-white bg-black/20 hover:bg-black/40 transition duration-150 ease-in-out" data-page="contact">
                              Ask a Question
                          </a>
                      </div>
@@ -490,17 +522,21 @@
         <!-- =================== -->
         <section id="accommodation" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Find Your Sanctuary</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Each of our spaces is designed with natural materials, comfort, and tranquility in mind. Find the perfect room for your stay.</p>
 
-                <!-- Room 1: Ocean View Suite -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Room 1: Ocean View Suite - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                         <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/0e7490/FFFFFF?text=Ocean+View+Suite" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/0e7490/FFF?text=Suite'"
                               alt="Ocean View Suite with private balcony" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Ocean View Suite</h3>
                         <p class="text-gray-600 mb-6">Wake up to the sound of the waves. Our spacious Ocean View Suites feature a private king bed, an en-suite bathroom, and a private balcony with panoramic views of the Pacific. The ultimate in comfort and style.</p>
                         <ul class="space-y-2 mb-8 text-gray-700">
@@ -509,21 +545,24 @@
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Air Conditioning</li>
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
                         </ul>
-                        <!-- Link Removed -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-lg shadow-lg hover:bg-cyan-800 transition duration-300">
+                         <!-- Updated rounded corner -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
                             Book This Suite
                         </a>
                     </div>
                 </div>
 
-                <!-- Room 2: Garden Bungalow -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Room 2: Garden Bungalow - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/10b981/FFFFFF?text=Garden+Bungalow" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/10b981/FFF?text=Bungalow'"
                               alt="Garden Bungalow surrounded by plants" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Garden Bungalow</h3>
                         <p class="text-gray-600 mb-6">Tucked away in our lush tropical gardens, the Garden Bungalows offer a peaceful and private retreat. Featuring a comfortable queen bed, en-suite bathroom, and a private terrace to relax and read a book.</p>
                         <ul class="space-y-2 mb-8 text-gray-700">
@@ -532,21 +571,24 @@
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
                         </ul>
-                         <!-- Link Removed -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-lg shadow-lg hover:bg-cyan-800 transition duration-300">
+                         <!-- Updated rounded corner -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
                             Book This Bungalow
                         </a>
                     </div>
                 </div>
                 
-                <!-- Room 3: Eco-Chic Dorm -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Room 3: Eco-Chic Dorm - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                         <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/f59e0b/FFFFFF?text=Eco-Chic+Dorm" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/f59e0b/FFF?text=Dorm'"
                               alt="Clean and modern eco-chic dorm room" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Eco-Chic Dorm</h3>
                         <p class="text-gray-600 mb-6">Perfect for solo travelers and those on a budget. Our shared dorms are clean, secure, and stylish, featuring custom-built bunk beds, personal lockers, and shared bathrooms. A great place to meet fellow travelers.</p>
                         <ul class="space-y-2 mb-8 text-gray-700">
@@ -555,20 +597,23 @@
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Personal Lockers</li>
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
                         </ul>
-                        <!-- Link Removed -->
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-lg shadow-lg hover:bg-cyan-800 transition duration-300">
+                         <!-- Updated rounded corner -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
                             Book Your Bed
                         </a>
                     </div>
                 </div>
-                 <!-- Room 4: Cozy Matrimonial -->
-                 <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden mb-12">
+                 <!-- Room 4: Cozy Matrimonial - Updated rounded corner -->
+                 <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                      <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/fbbf24/FFFFFF?text=Cozy+Matrimonial" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/fbbf24/FFF?text=Room 4'"
                               alt="Cozy Matrimonial room" class="w-full h-80 md:h-full object-cover">
                      </div>
                      <div class="md:w-1/2 p-8 md:p-12">
+                          <!-- Heading uses Poppins Bold -->
                          <h3 class="text-3xl font-bold text-gray-900 mb-4">Cozy Matrimonial</h3>
                          <p class="text-gray-600 mb-6">A comfortable and inviting room perfect for couples or solo travelers, featuring a queen bed and natural decor.</p>
                          <ul class="space-y-2 mb-8 text-gray-700">
@@ -577,8 +622,8 @@
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Ceiling Fan</li>
                             <li class="flex items-center"><svg class="w-5 h-5 text-cyan-700 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Eco-Friendly Toiletries</li>
                          </ul>
-                          <!-- Link Removed -->
-                         <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-lg shadow-lg hover:bg-cyan-800 transition duration-300">
+                           <!-- Updated rounded corner -->
+                         <a href="#" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-700 text-white text-base font-medium px-8 py-3 rounded-xl shadow-lg hover:bg-cyan-800 transition duration-300">
                              Book This Room
                          </a>
                      </div>
@@ -592,17 +637,21 @@
         <!-- =================== -->
         <section id="surf" class="py-20 bg-gray-50"> 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Catch the Perfect Wave</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Mancora is home to some of the most consistent and fun waves in Peru. Whether it's your first time or you're a seasoned pro, we have something for you.</p>
 
-                <!-- Lessons & Coaching -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Lessons & Coaching - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/0891b2/FFFFFF?text=Surf+Lesson" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/0891b2/FFF?text=Lesson'"
                               alt="Surf lesson on the beach" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                          <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Surf Lessons & Coaching</h3>
                         <p class="text-gray-600 mb-6">Our experienced, local instructors are passionate about surfing and sharing their knowledge. We focus on safety, fun, and progression.</p>
                         <ul class="space-y-3 mb-8 text-gray-700">
@@ -616,14 +665,17 @@
                     </div>
                 </div>
 
-                <!-- Board Rentals -->
-                <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Board Rentals - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/a21caf/FFFFFF?text=Surfboard+Quiver" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/a21caf/FFF?text=Boards'"
                               alt="Quiver of surfboards for rent" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Board Rentals</h3>
                         <p class="text-gray-600 mb-6">Travel light and use our extensive quiver. We have boards for all levels and conditions, from high-performance shortboards to funboards and longboards.</p>
                         <ul class="space-y-2 mb-8 text-gray-700">
@@ -644,17 +696,21 @@
         <!-- =================== -->
         <section id="kitesurf" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Ride the Wind</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Mancora is a world-renowned kitesurfing spot, thanks to our consistent thermal winds and warm waters. Come see why kiters return here year after year.</p>
 
-                <!-- Lessons -->
-                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Lessons - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/db2777/FFFFFF?text=Kitesurf+Lesson" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/db2777/FFF?text=Kite+Lesson'"
                               alt="Kitesurf lesson in the water" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">IKO Certified Lessons</h3>
                         <p class="text-gray-600 mb-6">Our kite school is IKO certified, ensuring the highest standards of safety and teaching quality. We offer courses for all levels.</p>
                         <ul class="space-y-3 mb-8 text-gray-700">
@@ -668,23 +724,27 @@
                     </div>
                 </div>
                 
-                <!-- The Spot -->
-                <div class="bg-gray-800 text-white rounded-lg shadow-xl p-8 md:p-12">
+                <!-- The Spot - Updated rounded corner -->
+                <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12">
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-3xl font-bold text-center mb-8">The Spot: Conditions & Rentals</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                         <div>
                             <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
-                            <h4 class="text-2xl font-bold mb-2">The Wind</h4>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h4 class="text-2xl font-semibold mb-2">The Wind</h4>
                             <p class="text-gray-300">Consistent side-onshore thermal winds. Best season is April to December. Average 18-25 knots, perfect for 7m-10m kites.</p>
                         </div>
                         <div>
                             <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM12 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zM20 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"></path></svg>
-                            <h4 class="text-2xl font-bold mb-2">The Water</h4>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h4 class="text-2xl font-semibold mb-2">The Water</h4>
                             <p class="text-gray-300">Warm water all year - no wetsuit needed! A mix of flat water inside the reef and fun waves further out. Wide, sandy beach for setup.</p>
                         </div>
                         <div>
                             <svg class="w-12 h-12 text-cyan-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"></path><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-                            <h4 class="text-2xl font-bold mb-2">Gear & Storage</h4>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h4 class="text-2xl font-semibold mb-2">Gear & Storage</h4>
                             <p class="text-gray-300">We rent the latest Duotone & Core kites and boards. Secure storage available. Gear rental can be added when booking.</p>
                         </div>
                     </div>
@@ -698,17 +758,21 @@
         <!-- =================== -->
         <section id="yoga" class="py-20 bg-gray-50"> 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Connect & Restore</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Find your flow in our stunning open-air yoga shala. Whether you're a beginner or an advanced yogi, our classes are designed to complement your active lifestyle.</p>
 
-                <!-- Shala -->
-                <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Shala - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/16a34a/FFFFFF?text=Ocean+View+Yoga+Shala" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/16a34a/FFF?text=Yoga+Shala'"
                               alt="Open-air yoga shala with ocean view" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Sacred Space</h3>
                         <p class="text-gray-600 mb-6">Practice with the sound of the ocean and a gentle breeze. Our shala is built from local, eco-friendly materials and offers a panoramic view of the coastline. It's the perfect place to start your day or unwind at sunset.</p>
                         <ul class="space-y-2 mb-8 text-gray-700">
@@ -720,14 +784,17 @@
                     </div>
                 </div>
 
-                <!-- Classes -->
-                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                <!-- Classes - Updated rounded corner -->
+                <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden mb-12">
                     <div class="md:w-1/2">
+                          <!-- Added loading="lazy" -->
                          <img src="https://placehold.co/800x600/facc15/FFFFFF?text=Yoga+Class" 
+                              loading="lazy"
                               onerror="this.src='https://placehold.co/800x600/facc15/FFF?text=Yoga+Class'"
                               alt="Yoga class in session" class="w-full h-80 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8 md:p-12">
+                         <!-- Heading uses Poppins Bold -->
                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Classes & Styles</h3>
                         <p class="text-gray-600 mb-6">We offer 2-3 classes daily, led by our certified resident and guest instructors. Private classes are also available upon request.</p>
                         <ul class="space-y-3 mb-8 text-gray-700">
@@ -746,34 +813,41 @@
         <!-- =================== -->
         <section id="sustainability" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">The Eco House Philosophy</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">"Eco House" isn't just a name—it's our promise. We are committed to sustainable tourism that respects our beautiful environment and supports our local community.</p>
 
+                  <!-- Updated rounded corner, added loading="lazy" -->
                  <img src="https://placehold.co/1200x600/14b8a6/FFFFFF?text=Sustainable+Practices" 
+                      loading="lazy"
                       onerror="this.src='https://placehold.co/1200x600/14b8a6/FFF?text=Eco+Practices'"
-                      alt="Visual representation of sustainability efforts" class="w-full h-auto object-cover rounded-lg shadow-lg mb-12">
+                      alt="Visual representation of sustainability efforts" class="w-full h-auto object-cover rounded-xl shadow-lg mb-12">
 
                 <!-- Core Pillars -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
                     <div>
                         <svg class="w-12 h-12 text-green-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                        <h3 class="text-2xl font-bold mb-2">Eco-Construction</h3>
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold mb-2">Eco-Construction</h3>
                         <p class="text-gray-600">Our buildings are made from locally sourced wood, bamboo, and recycled materials. The design promotes natural airflow, reducing the need for A/C.</p>
                     </div>
                     <div>
                         <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 7.4 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM12.56 12.03c.18-.6.4-1.17.65-1.74A4.25 4.25 0 0 1 15.6 9.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="M11 20.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.1-1.4-2.82A4.25 4.25 0 0 0 11.4 13.1c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33 0 2.22 1.8 4.02 4 4.02zM17.56 16.03c.18-.6.4-1.17.65-1.74a4.25 4.25 0 0 1 2.4-1.2c0 .01 0 .01 0 .02-1.31.68-2.2 1.9-2.2 3.33a4.01 4.01 0 0 0 1.96 3.46c.18-.6.4-1.17.65-1.74.2-.4.4-.8.6-1.2Z"></path><path d="m14 3 1.1 2.3c.1.2.3.4.5.5L18 7l-2.3 1.1c-.2.1-.4.3-.5.5L14 11l-1.1-2.3c-.1-.2-.3-.4-.5-.5L10 7l2.3-1.1c.2-.1.4-.3.5-.5L14 3z"></path></svg>
-                        <h3 class="text-2xl font-bold mb-2">Water Conservation</h3>
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold mb-2">Water Conservation</h3>
                         <p class="text-gray-600">We capture and treat 100% of our greywater, which is then used to irrigate our lush tropical gardens. All fixtures are low-flow to reduce waste.</p>
                     </div>
                     <div>
                         <svg class="w-12 h-12 text-yellow-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        <h3 class="text-2xl font-bold mb-2">Renewable Energy</h3>
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold mb-2">Renewable Energy</h3>
                         <p class="text-gray-600">Solar panels heat all of our water, and we utilize LED lighting and energy-efficient appliances throughout the property to minimize our footprint.</p>
                     </div>
                 </div>
 
-                <!-- Our Practices -->
-                <div class="bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
+                <!-- Our Practices - Updated rounded corner -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Practices & Community</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
                         <p class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Zero Single-Use Plastic Policy</p>
@@ -792,11 +866,13 @@
         <!-- =================== -->
         <section id="restaurant" class="py-20 bg-gray-50"> 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Nourish Your Body</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Our on-site restaurant and bar, "Nourish," is the heart of our hotel. We believe that good food is a key part of a good life.</p>
 
-                <!-- Philosophy -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden p-8 md:p-12 mb-12">
+                <!-- Philosophy - Updated rounded corner -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 mb-12">
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-3xl font-bold text-gray-900 mb-4">Local, Fresh, Sustainable</h3>
                     <p class="text-lg text-gray-600 mb-6">Our menu is a celebration of Peru's incredible bounty. We work directly with local farmers and fishermen to source the freshest ingredients daily. Expect vibrant ceviches, healthy poke bowls, hearty post-surf breakfasts, and delicious tropical cocktails.</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
@@ -816,20 +892,17 @@
                 </div>
 
                 <!-- Gallery -->
+                 <!-- Heading uses Poppins Bold -->
                 <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Gallery</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Fresh+Ceviche" 
-                         onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+1'"
-                         alt="Fresh ceviche dish" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Pisco+Sour" 
-                         onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+2'"
-                         alt="Pisco sour cocktail" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Restaurant+Ambiance" 
-                         onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+3'"
-                         alt="Restaurant ambiance at sunset" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
-                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Smoothie+Bowl" 
-                         onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+4'"
-                         alt="Breakfast smoothie bowl" class="rounded-lg shadow-md w-full h-full object-cover aspect-square">
+                     <!-- Updated rounded corner -->
+                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Fresh+Ceviche" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+1'" alt="Fresh ceviche dish" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                     <!-- Updated rounded corner -->
+                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Pisco+Sour" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+2'" alt="Pisco sour cocktail" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                     <!-- Updated rounded corner -->
+                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Restaurant+Ambiance" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+3'" alt="Restaurant ambiance at sunset" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                     <!-- Updated rounded corner -->
+                    <img src="https://placehold.co/400x400/d946ef/FFFFFF?text=Smoothie+Bowl" loading="lazy" onerror="this.src='https://placehold.co/400x400/d946ef/FFF?text=Food+4'" alt="Breakfast smoothie bowl" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
                 </div>
             </div>
         </section>
@@ -839,26 +912,31 @@
         <!-- =================== -->
         <section id="location" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-16">Find Us in Paradise</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <!-- Map -->
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Location</h3>
-                        <div class="bg-gray-200 rounded-lg shadow-md h-96 flex items-center justify-center text-gray-500">
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Location</h3>
+                         <!-- Updated rounded corner -->
+                        <div class="bg-gray-200 rounded-xl shadow-md h-96 flex items-center justify-center text-gray-500">
                             <!-- Google Maps iframe: Replace with your embed code -->
                             <p>Google Map Placeholder</p>
                         </div>
                     </div>
                     <!-- How to Get Here -->
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">How to Get Here</h3>
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">How to Get Here</h3>
                         <p class="text-gray-600 mb-6">We are located just north of Mancora town, in the peaceful Las Pocitas beach area. We are happy to arrange airport transfers.</p>
                         <ul class="space-y-4 text-gray-700">
                             <li><strong class="font-medium text-gray-900">By Air:</strong> The closest airports are Talara (TAL - 1.5 hours), Tumbes (TBP - 2 hours), and Piura (PIU - 3 hours). All accept daily flights from Lima (LIM).</li>
                             <li><strong class="font-medium text-gray-900">By Bus:</strong> Luxury buses run daily from Lima, Guayaquil (Ecuador), and other major cities in Peru.</li>
                         </ul>
 
-                        <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What's Nearby?</h3>
+                         <!-- Heading uses Poppins SemiBold -->
+                        <h3 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">What's Nearby?</h3>
                         <ul class="space-y-2 text-gray-700 list-disc list-inside">
                             <li>Mancora Town (Restaurants & Nightlife) - 5 min drive</li>
                             <li>Los Organos (Whale Watching) - 15 min drive</li>
@@ -874,11 +952,12 @@
         <!-- =================== -->
         <section id="contact" class="py-20 bg-gray-50"> 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <!-- Heading uses Poppins Black -->
                 <h2 class="text-4xl font-black text-center text-gray-900 mb-4">Get in Touch</h2>
                 <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-16">Have questions? We're here to help. Send us a message, and our team will get back to you as soon as possible.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 rounded-lg shadow-lg">
+                    <!-- Contact Form - Updated rounded corner -->
+                    <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white p-8 rounded-xl shadow-lg">
                         <input type="hidden" name="form-name" value="contact-form" />
                         <p class="hidden">
                             <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -886,22 +965,27 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
-                                <input type="text" name="first-name" id="first-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                 <!-- Updated rounded corner -->
+                                <input type="text" name="first-name" id="first-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
                             </div>
                             <div>
                                 <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                                <input type="text" name="last-name" id="last-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                 <!-- Updated rounded corner -->
+                                <input type="text" name="last-name" id="last-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
                             </div>
                             <div class="sm:col-span-2">
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
+                                 <!-- Updated rounded corner -->
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500">
                             </div>
                             <div class="sm:col-span-2">
                                 <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"></textarea>
+                                 <!-- Updated rounded corner -->
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="mt-6 w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                         <!-- Updated rounded corner -->
+                        <button type="submit" class="mt-6 w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-xl text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                             Send Message
                         </button>
                     </form>
@@ -909,17 +993,20 @@
                     <div class="space-y-6">
                         <div>
                             <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <h3 class="text-xl font-bold text-gray-900">Phone & WhatsApp</h3>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-xl font-semibold text-gray-900">Phone & WhatsApp</h3>
                              <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="text-lg text-gray-600 hover:text-cyan-700">+51 987 654 321 (Click to chat!)</a>
                         </div>
                         <div>
                             <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <h3 class="text-xl font-bold text-gray-900">Email</h3>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-xl font-semibold text-gray-900">Email</h3>
                              <a href="mailto:reservas@ecohousemancora.com" class="text-lg text-gray-600 hover:text-cyan-700">reservas@ecohousemancora.com</a>
                         </div>
                         <div>
                             <svg class="w-8 h-8 text-cyan-700 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <h3 class="text-xl font-bold text-gray-900">Address</h3>
+                             <!-- Heading uses Poppins SemiBold -->
+                            <h3 class="text-xl font-semibold text-gray-900">Address</h3>
                              <p class="text-lg text-gray-600">Antigua Panamericana Norte Km. 1215<br>Las Pocitas, Mancora, Peru</p>
                         </div>
                     </div>
@@ -935,6 +1022,7 @@
         <section id="gallery-page" class="page-content py-20 md:py-28">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
                 <div class="text-center mb-16">
+                     <!-- Heading uses Poppins Bold -->
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Gallery</h1>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         Explore the feeling of La Maison Eco House.
@@ -942,16 +1030,17 @@
                 </div>
                 
                 <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-                    <img src="https://placehold.co/600x400/D8DEE9/4C566A?text=Gallery+1" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x800/E5E9F0/4C566A?text=Gallery+2" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x450/ECEFF4/4C566A?text=Gallery+3" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x400/0891b2/FFFFFF?text=Surf+Gallery" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x400/16a34a/FFFFFF?text=Yoga+Gallery" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x800/D8DEE9/4C566A?text=Gallery+4" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x400/ECEFF4/4C566A?text=Gallery+5" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Gallery" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x400/d946ef/FFFFFF?text=Food+Gallery" class="rounded-lg shadow-md w-full">
-                    <img src="https://placehold.co/600x800/ECEFF4/4C566A?text=Gallery+6" class="rounded-lg shadow-md w-full">
+                     <!-- Updated rounded corner, added loading="lazy" -->
+                    <img src="https://placehold.co/600x400/D8DEE9/4C566A?text=Gallery+1" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x800/E5E9F0/4C566A?text=Gallery+2" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x450/ECEFF4/4C566A?text=Gallery+3" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x400/0891b2/FFFFFF?text=Surf+Gallery" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x400/16a34a/FFFFFF?text=Yoga+Gallery" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x800/D8DEE9/4C566A?text=Gallery+4" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x400/ECEFF4/4C566A?text=Gallery+5" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x450/db2777/FFFFFF?text=Kite+Gallery" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x400/d946ef/FFFFFF?text=Food+Gallery" loading="lazy" class="rounded-xl shadow-md w-full">
+                    <img src="https://placehold.co/600x800/ECEFF4/4C566A?text=Gallery+6" loading="lazy" class="rounded-xl shadow-md w-full">
                      <!-- Add 2-4 more placeholders if needed for the expanded gallery -->
                 </div>
             </div>
@@ -961,12 +1050,15 @@
         <section id="faq-page" class="page-content py-20 md:py-28">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
                 <div class="text-center mb-16">
+                     <!-- Heading uses Poppins Bold -->
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Frequently Asked Questions</h1>
                 </div>
                 
                 <div class="space-y-6">
-                    <details class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 group">
-                        <summary class="flex justify-between items-center cursor-pointer font-medium text-gray-900 text-lg group-open:border-b group-open:pb-3">
+                     <!-- Updated rounded corner -->
+                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
+                         <!-- Summary text uses Poppins Semibold -->
+                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3"> 
                             What's the best time to visit?
                             <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -976,8 +1068,10 @@
                             For **surfing**, swell is consistent year-round (April-Nov for bigger waves). For **kitesurfing**, the wind season is May to December. For pure sunshine, December-March is hottest.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 group">
-                        <summary class="flex justify-between items-center cursor-pointer font-medium text-gray-900 text-lg group-open:border-b group-open:pb-3">
+                     <!-- Updated rounded corner -->
+                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
+                         <!-- Summary text uses Poppins Semibold -->
+                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
                             How do I book surf/kite packages?
                             <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -987,8 +1081,10 @@
                             Easy! First, book your accommodation using the "Book Now" button. During the checkout process in our booking engine (Guesty), you will see all available surf lessons, kite courses, and gear rentals listed as optional "add-ons" or "extras" that you can add to your reservation before completing the payment.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 group">
-                        <summary class="flex justify-between items-center cursor-pointer font-medium text-gray-900 text-lg group-open:border-b group-open:pb-3">
+                    <!-- Updated rounded corner -->
+                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
+                         <!-- Summary text uses Poppins Semibold -->
+                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
                             How do I get from the airport?
                             <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -998,8 +1094,10 @@
                             We can arrange a trusted private taxi to pick you up from Talara (TAL), Tumbes (TBP), or Piura (PIU) airports. Please contact us with your flight details after booking to coordinate your transfer. Rates vary depending on the airport.
                         </p>
                     </details>
-                    <details class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 group">
-                        <summary class="flex justify-between items-center cursor-pointer font-medium text-gray-900 text-lg group-open:border-b group-open:pb-3">
+                    <!-- Updated rounded corner -->
+                    <details class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 group">
+                         <!-- Summary text uses Poppins Semibold -->
+                        <summary class="flex justify-between items-center cursor-pointer font-semibold text-gray-900 text-lg group-open:border-b group-open:pb-3">
                             Is breakfast included?
                             <svg class="h-6 w-6 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -1018,8 +1116,10 @@
         <section id="privacy-page" class="page-content py-20 md:py-28">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
                 <div class="text-center mb-16">
+                     <!-- Heading uses Poppins Bold -->
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Privacy Policy & Terms</h1>
                 </div>
+                <!-- Applying Poppins to prose headings via CSS rule -->
                 <div class="prose prose-lg max-w-none text-gray-600">
                     <h2 class="text-2xl font-semibold text-gray-900">Privacy Policy</h2>
                     <p>
@@ -1060,11 +1160,13 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- About -->
                 <div>
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-lg font-bold text-white mb-4">Eco House Mancora</h3>
                     <p class="text-sm">Your eco-friendly home for surf, kitesurf, and yoga in the heart of Peru's northern coast. Adventure and relaxation await.</p>
                 </div>
                 <!-- Quick Links -->
                 <div>
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#accommodation" class="nav-link text-sm hover:text-white" data-page="accommodation">Accommodation</a></li>
@@ -1074,6 +1176,7 @@
                 </div>
                 <!-- Experiences -->
                 <div>
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Experiences</h3>
                     <ul class="space-y-2">
                         <li><a href="#surf" class="nav-link text-sm hover:text-white" data-page="surf">Surf</a></li>
@@ -1083,11 +1186,12 @@
                 </div>
                 <!-- Connect -->
                 <div>
+                     <!-- Heading uses Poppins Bold -->
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Connect</h3>
                     <ul class="space-y-2">
                         <li><a href="#contact" class="nav-link text-sm hover:text-white" data-page="contact">Contact Us</a></li>
                         <!-- Social Icons -->
-                        <li class="flex items-center space-x-3 pt-1"> <!-- Added padding top -->
+                        <li class="flex items-center space-x-3 pt-1"> 
                             <!-- Instagram Icon -->
                             <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
                                 <span class="sr-only">Instagram</span>
@@ -1129,102 +1233,117 @@
             const closeIcon = document.getElementById('close-icon');
 
             function openMobileMenu() {
-                mobileMenu.classList.remove('hidden', '-translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-                hamburgerIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                if(mobileMenu && hamburgerIcon && closeIcon && mobileMenuButton) {
+                    mobileMenu.classList.remove('hidden', '-translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                }
             }
 
             function closeMobileMenu() {
-                mobileMenu.classList.add('-translate-x-full');
-                mobileMenu.classList.remove('translate-x-0');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300); // Wait for transition
-                hamburgerIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                 if(mobileMenu && hamburgerIcon && closeIcon && mobileMenuButton) {
+                    mobileMenu.classList.add('-translate-x-full');
+                    mobileMenu.classList.remove('translate-x-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300); // Wait for transition
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                 }
             }
 
-            mobileMenuButton.addEventListener('click', () => {
-                const isMenuOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                if (isMenuOpen) {
-                    closeMobileMenu();
-                } else {
-                    openMobileMenu();
-                }
-            });
+            if (mobileMenuButton) { // Check if button exists
+                mobileMenuButton.addEventListener('click', () => {
+                    const isMenuOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    if (isMenuOpen) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            } else {
+                console.error("Mobile menu button not found. Check HTML ID: mobile-menu-button");
+            }
 
             // --- SPA Navigation Logic ---
             const mainContent = document.querySelector('main');
-            const allPages = mainContent.querySelectorAll('section'); // All sections are potential pages now
-            const allNavLinks = document.querySelectorAll('.nav-link, .nav-link-mobile'); // All navigation links
+            const allPages = mainContent ? mainContent.querySelectorAll('section') : []; 
+            const allNavLinks = document.querySelectorAll('.nav-link, .nav-link-mobile'); 
 
             function updateActiveNavLinks(targetPageId) {
                  allNavLinks.forEach(link => {
-                    const linkPageId = link.dataset.page || link.getAttribute('href')?.substring(1); // Get page ID from data-page or href
+                    const linkPageId = link.dataset.page || link.getAttribute('href')?.substring(1); 
                      
                     if (linkPageId === targetPageId) {
-                        // Check if it's a mobile link or desktop/footer link for different active styles
                         if(link.classList.contains('nav-link-mobile')) {
-                            link.classList.add('active'); // Add mobile active class
+                            link.classList.add('active'); 
                         } else {
-                            link.classList.add('active'); // Add desktop active class
+                            link.classList.add('active'); 
                         }
                     } else {
                         if(link.classList.contains('nav-link-mobile')) {
-                             link.classList.remove('active'); // Remove mobile active class
+                             link.classList.remove('active'); 
                          } else {
-                             link.classList.remove('active'); // Remove desktop active class
+                             link.classList.remove('active'); 
                          }
                     }
                 });
             }
 
             function showPage(pageId) {
-                // Ensure pageId has a value, default to 'home'
                 const targetPageId = pageId || 'home'; 
                 let pageFound = false;
 
-                allPages.forEach(page => {
-                    if (page.id === targetPageId) {
-                        page.classList.add('active');
-                        pageFound = true;
-                    } else {
-                        page.classList.remove('active');
-                    }
-                });
+                if (allPages.length > 0) {
+                    allPages.forEach(page => {
+                        if (page.id === targetPageId) {
+                            page.classList.add('active');
+                            pageFound = true;
+                        } else {
+                            page.classList.remove('active');
+                        }
+                    });
+                } else {
+                     console.error("No page sections found within <main> tag.");
+                     return; 
+                }
 
-                // Fallback if ID doesn't match any section
                 if (!pageFound) {
                     const homePage = document.getElementById('home');
                     if (homePage) {
                         homePage.classList.add('active');
+                         updateActiveNavLinks('home'); // Update nav links if falling back to home
+                    } else {
+                         console.error("Default homepage section with id='home' not found.");
                     }
-                    updateActiveNavLinks('home');
                 } else {
                     updateActiveNavLinks(targetPageId);
                 }
                 
-                window.scrollTo(0, 0); // Scroll to top on page change
+                window.scrollTo(0, 0); 
             }
 
             // Add click listeners to all nav links for SPA navigation
             allNavLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
-                    // Only prevent default for links with data-page or href starting with #
                     const href = link.getAttribute('href');
                     const pageId = link.dataset.page || (href && href.startsWith('#') ? href.substring(1) : null);
 
                     if (pageId) {
-                        e.preventDefault(); // Prevent default anchor jump
-                        window.location.hash = pageId; // Update hash, triggers hashchange listener
+                        e.preventDefault(); 
+                        // Only change hash if it's different to prevent redundant loads/flicker
+                        if(window.location.hash !== `#${pageId}`) {
+                            window.location.hash = pageId; 
+                        } else {
+                            // If hash is already correct, ensure page is shown (useful for initial load edge cases)
+                             showPage(pageId);
+                        }
                     }
-                    // Allow external links (like Book Now placeholder) to work normally if they don't have pageId
                     
-                    // Close mobile menu if open
-                    if (mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                    if (mobileMenuButton && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
                         closeMobileMenu();
                     }
                 });
@@ -1233,17 +1352,17 @@
              // Handle Hash Changes for SPA Pages
              function handleHashChange() {
                 const hash = window.location.hash.substring(1);
-                 showPage(hash || 'home'); // Show page based on hash, default to home
+                 showPage(hash || 'home'); 
              }
 
             window.addEventListener('hashchange', handleHashChange);
             
-            // Initial load check: Show page based on hash or default to home
+            // Initial load check
             handleHashChange(); 
 
 
              // --- Testimonial Slider Logic ---
-             const sliderContainer = document.getElementById('testimonial-slider'); // Use the container ID
+             const sliderContainer = document.getElementById('testimonial-slider'); 
              if (sliderContainer) {
                  const slides = sliderContainer.querySelectorAll('.testimonial-slide');
                  const prevButton = document.getElementById('prev-testimonial');
@@ -1251,6 +1370,10 @@
                  let currentSlide = 0;
 
                  function showSlide(index) {
+                     if(index < 0 || index >= slides.length || slides.length === 0) {
+                         // console.error("Invalid slide index or no slides:", index); // Be less noisy
+                         return;
+                     }
                      slides.forEach((slide, i) => {
                          if (i === index) {
                              slide.classList.add('active-slide');
@@ -1262,24 +1385,26 @@
 
 
                  function nextSlide() {
-                     currentSlide = (currentSlide + 1) % slides.length;
-                     showSlide(currentSlide);
+                     if (slides.length > 0) {
+                         currentSlide = (currentSlide + 1) % slides.length;
+                         showSlide(currentSlide);
+                     }
                  }
 
                  function prevSlide() {
-                     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                     showSlide(currentSlide);
+                      if (slides.length > 0) {
+                         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                         showSlide(currentSlide);
+                      }
                  }
 
-                 // Check specifically if the buttons exist before adding listeners
                  if (prevButton && nextButton && slides.length > 0) { 
                      prevButton.addEventListener('click', prevSlide);
                      nextButton.addEventListener('click', nextSlide);
-                     showSlide(currentSlide); // Show the first slide initially
+                     showSlide(currentSlide); 
                  } else {
-                      // Only log error if elements are expected but not found
                       if (!prevButton || !nextButton) {
-                        console.error("Testimonial slider buttons not found. Check HTML IDs: prev-testimonial, next-testimonial");
+                        console.warn("Testimonial slider buttons not found. Check IDs: prev-testimonial, next-testimonial");
                       }
                       if (slides.length === 0) {
                          console.warn("No testimonial slides found within #testimonial-slider");
@@ -1294,19 +1419,30 @@
                  netlifyForm.addEventListener('submit', (e) => {
                      e.preventDefault();
                      const formData = new FormData(netlifyForm);
-                    
+                     const submitButton = netlifyForm.querySelector('button[type="submit"]'); 
+                     if(submitButton) submitButton.disabled = true; 
+
                      fetch('/', {
                          method: 'POST',
                          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                          body: new URLSearchParams(formData).toString()
                      }).then(() => {
-                         netlifyForm.innerHTML = `<div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md" role="alert"><p class="font-bold">Message Sent!</p><p>Thanks, we'll get back to you soon.</p></div>`;
+                         netlifyForm.innerHTML = `<div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-xl" role="alert"><p class="font-semibold">Message Sent!</p><p>Thanks, we'll get back to you soon.</p></div>`; 
                      }).catch((error) => {
-                         const errorMsg = document.createElement('p');
-                         errorMsg.textContent = 'Oops! Something went wrong. Please try again.';
-                         errorMsg.className = 'text-red-500 text-sm mt-2';
-                         netlifyForm.appendChild(errorMsg);
-                         console.error('Form submission error:', error); // Log error
+                         // Find existing error message if present
+                         let errorMsg = netlifyForm.querySelector('.form-error-message');
+                         if (!errorMsg) { // Create if it doesn't exist
+                            errorMsg = document.createElement('p');
+                            errorMsg.className = 'text-red-600 text-sm mt-3 form-error-message'; // Added a class for easy selection
+                            if(submitButton) {
+                                netlifyForm.insertBefore(errorMsg, submitButton);
+                            } else {
+                                netlifyForm.appendChild(errorMsg);
+                            }
+                         }
+                         errorMsg.textContent = 'Oops! Something went wrong submitting the form. Please try again or contact us directly.';
+                         console.error('Form submission error:', error); 
+                         if(submitButton) submitButton.disabled = false; 
                      });
                  });
             }
@@ -1317,13 +1453,19 @@
                 currentYearSpan.textContent = new Date().getFullYear();
             }
             
-            // Initialize Feather Icons
+            // Initialize Feather Icons - More Robust Check
             try {
-                // Check if feather is defined before calling replace
-                if (typeof feather !== 'undefined') {
+                if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
                     feather.replace();
                 } else {
-                    console.error("Feather icons library not loaded.");
+                    // Optionally wait a tiny bit in case script is slow loading, then check again
+                    setTimeout(() => {
+                         if (typeof feather !== 'undefined' && feather !== null && typeof feather.replace === 'function') { 
+                             feather.replace();
+                         } else {
+                              console.error("Feather icons library (feather) is not loaded or not defined correctly after delay.");
+                         }
+                    }, 500); // Wait 500ms
                 }
             } catch (e) {
                 console.error("Feather icons failed to initialize:", e);
