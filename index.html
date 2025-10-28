@@ -1129,11 +1129,12 @@
                     </div>
                     <!-- END: Excursions Section -->
                     
-                    <!-- The Spot Section - Slightly Enhanced -->
+                    <!-- The Spot Section - RESTRUCTURED -->
                     <div class="bg-gray-800 text-white rounded-xl shadow-xl p-8 md:p-12 mb-12">
                          <!-- Heading uses Poppins Bold -->
-                        <h3 class="text-3xl font-bold text-center mb-8">The Spot: Conditions & Rentals</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <h3 class="text-3xl font-bold text-center mb-10">The Spot: Conditions</h3>
+                        <!-- Updated to 2-col grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-2xl mx-auto text-center">
                             <div>
                                 <i data-feather="wind" class="w-12 h-12 text-cyan-400 mx-auto mb-4"></i>
                                  <!-- Heading uses Poppins SemiBold -->
@@ -1146,28 +1147,46 @@
                                 <h4 class="text-2xl font-semibold mb-2">The Water</h4>
                                 <p class="text-gray-300">Warm water all year - no wetsuit needed! A mix of flat water inside the reef and fun waves further out. Wide, sandy beach for setup.</p>
                             </div>
-                            <div>
-                                <i data-feather="tool" class="w-12 h-12 text-cyan-400 mx-auto mb-4"></i>
-                                 <!-- Heading uses Poppins SemiBold -->
-                                <h4 class="text-2xl font-semibold mb-2">Gear & Storage</h4>
-                                <p class="text-gray-300">High-quality Duotone & Core kites/boards available for rent directly on-site. Secure storage also available. Gear rental can be added when booking your stay.</p> <!-- Enhanced Text -->
-                            </div>
+                            <!-- Removed Gear & Storage column -->
                         </div>
                     </div>
 
-                    <!-- START: Call to Action Section (Refined) -->
-                     <div class="bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl shadow-xl p-8 md:p-12 text-center">
-                         <h2 class="text-3xl font-bold mb-4">Ready to Ride? Learn More & Book</h2>
-                         <p class="text-lg max-w-2xl mx-auto mb-6">
-                            All kitesurf lessons, coaching, camps, and trips are expertly managed by our partners at Wild Kitesurf Peru, operating directly from Eco House Mancora.
+                    <!-- START: NEW Gear & Storage Section -->
+                    <div class="my-16 text-center max-w-3xl mx-auto">
+                         <i data-feather="tool" class="w-12 h-12 text-pink-500 mx-auto mb-4"></i>
+                         <h3 class="text-3xl font-bold text-gray-900 mb-4">Your Kiting Hub: Gear & Storage</h3>
+                         <p class="text-lg text-gray-600">
+                             Travel light! We offer high-quality Duotone & Core kites/boards for rent directly on-site. Secure storage is also available for your own gear. All rentals and storage can be added when booking your stay.
                          </p>
-                         <p class="text-lg max-w-2xl mx-auto mb-8">
-                             You can easily add kitesurf packages and lessons as optional extras when booking your stay online. Alternatively, arrange your activities upon arrival or <a href="#contact" class="nav-link font-semibold underline hover:text-cyan-200" data-page="contact">contact us</a> directly with any questions.
-                         </p>
-                         <a href="https://wild-kitesurf-peru.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-purple-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
-                              Explore All Kite Options on Wild Kitesurf Peru 
-                              <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
-                         </a>
+                    </div>
+                    <!-- END: NEW Gear & Storage Section -->
+
+                    <!-- START: Call to Action Section (RESTRUCTURED with Image) -->
+                     <div class="bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl shadow-xl overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+                            <!-- Image Column -->
+                             <div class="order-1"> <!-- Show image first on mobile -->
+                                 <img src="https://placehold.co/800x600/a21caf/FFFFFF?text=Kitesurfer+in+Action"
+                                      loading="lazy"
+                                      onerror="this.src='https://placehold.co/800x600/a21caf/FFF?text=Ride+With+Us'"
+                                      alt="Kitesurfer in action in Mancora"
+                                      class="w-full h-64 md:h-full object-cover">
+                             </div>
+                             <!-- Text Column -->
+                             <div class="p-8 md:p-12 text-center md:text-left order-2">
+                                 <h2 class="text-3xl font-bold mb-4">Ready to Ride? Learn More & Book</h2>
+                                 <p class="text-lg max-w-2xl mx-auto md:mx-0 mb-6">
+                                    All kitesurf lessons, coaching, camps, and trips are expertly managed by our partners at Wild Kitesurf Peru, operating directly from Eco House Mancora.
+                                 </p>
+                                 <p class="text-lg max-w-2xl mx-auto md:mx-0 mb-8">
+                                     You can easily add kitesurf packages and lessons as optional extras when booking your stay online. Alternatively, arrange your activities upon arrival or <a href="#contact" class="nav-link font-semibold underline hover:text-cyan-200" data-page="contact">contact us</a> directly with any questions.
+                                 </p>
+                                 <a href="https://wild-kitesurf-peru.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-purple-700 bg-white hover:bg-gray-100 transition duration-150 ease-in-out">
+                                      Explore All Kite Options on Wild Kitesurf Peru 
+                                      <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
+                                 </a>
+                             </div>
+                         </div>
                      </div>
                     <!-- END: Call to Action Section -->
 
@@ -1492,7 +1511,7 @@
                     <ul class="space-y-2">
                         <li><a href="#surf" class="nav-link text-sm hover:text-white" data-page="surf">Surf</a></li>
                         <li><a href="#kitesurf" class="nav-link text-sm hover:text-white" data-page="kitesurf">Kitesurf</a></li>
-<li><a href="#yoga" class="nav-link text-sm hover:text-white" data-page="yoga">Yoga</a></li>
+                        <li><a href="#yoga" class="nav-link text-sm hover:text-white" data-page="yoga">Yoga</a></li>
                     </ul>
                 </div>
                 <!-- Connect -->
@@ -1827,5 +1846,4 @@
 
 </body>
 </html>
-
 
