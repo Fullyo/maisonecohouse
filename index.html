@@ -190,7 +190,7 @@
         <!-- =================== -->
         <!--     HOME PAGE       -->
         <!-- =================== -->
-        <section id="home" class="active"> <!-- NOTE: The `active` class makes this section visible on load -->
+        <section id="home" class=""> <!-- NOTE: The `active` class makes this section visible on load -->
             <!-- 1. Hero Section -->
             <div class="relative bg-gray-900 h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
                 <!-- Added loading="lazy" -->
@@ -536,7 +536,7 @@
         <!-- =================== -->
         <!-- ACCOMMODATION PAGE -->
         <!-- =================== -->
-        <section id="accommodation" class="bg-white">
+        <section id="accommodation" class="bg-white active">
             <!-- Page Banner -->
             <div class="relative bg-gray-900 h-48 md:h-64 flex items-center justify-center text-center text-white overflow-hidden">
                 <img src="https://placehold.co/1600x400/0e7490/FFFFFF?text=Accommodation" 
@@ -558,27 +558,42 @@
                     <!-- Intro Text -->
                     <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto -mt-4 mb-16">Each of our spaces is designed with natural materials, comfort, and tranquility in mind. Find the perfect room for your stay.</p>
                     
-                    <!-- START: Why Stay Snippet -->
+                    <!-- START: Why Stay Snippet (UPDATED with Images) -->
                     <div class="mb-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
                         <div class="flex flex-col items-center">
-                            <i data-feather="sun" class="w-10 h-10 text-amber-500 mb-2"></i>
+                             <!-- Replaced Icon with Image -->
+                             <img src="https://placehold.co/100x100/fbbf24/FFFFFF?text=Ocean+View" 
+                                  loading="lazy" 
+                                  onerror="this.src='https://placehold.co/100x100/fbbf24/FFF?text=View'" 
+                                  alt="Ocean view from a room" 
+                                  class="w-24 h-24 rounded-full object-cover mb-4 shadow-md">
                             <h4 class="font-semibold text-gray-800">Oceanfront Bliss</h4>
                             <p class="text-gray-600 text-sm">Wake up to sea breezes and stunning Pacific views.</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i data-feather="leaf" class="w-10 h-10 text-green-600 mb-2"></i>
+                             <!-- Replaced Icon with Image -->
+                             <img src="https://placehold.co/100x100/16a34a/FFFFFF?text=Eco+Materials" 
+                                  loading="lazy" 
+                                  onerror="this.src='https://placehold.co/100x100/16a34a/FFF?text=Eco'" 
+                                  alt="Natural wood and bamboo construction" 
+                                  class="w-24 h-24 rounded-full object-cover mb-4 shadow-md">
                             <h4 class="font-semibold text-gray-800">Eco-Conscious Comfort</h4>
                             <p class="text-gray-600 text-sm">Relax in rooms built with sustainable, natural materials.</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i data-feather="coffee" class="w-10 h-10 text-cyan-700 mb-2"></i>
+                             <!-- Replaced Icon with Image -->
+                             <img src="https://placehold.co/100x100/0891b2/FFFFFF?text=Beach+Access" 
+                                  loading="lazy" 
+                                  onerror="this.src='https://placehold.co/100x100/0891b2/FFF?text=Beach'" 
+                                  alt="Path leading to the beach" 
+                                  class="w-24 h-24 rounded-full object-cover mb-4 shadow-md">
                             <h4 class="font-semibold text-gray-800">Steps from Adventure</h4>
                             <p class="text-gray-600 text-sm">Easy access to surf, kite spots, and Mancora town.</p>
                         </div>
                     </div>
                     <!-- END: Why Stay Snippet -->
 
-                    <!-- START: Common Amenities Section -->
+                    <!-- START: Common Amenities Section (UPDATED Storage text) -->
                     <div class="mb-20 bg-gray-50 rounded-xl shadow-lg p-8 md:p-12">
                         <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Amenities For All Guests</h2>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-4 text-gray-700 max-w-4xl mx-auto">
@@ -587,7 +602,7 @@
                             <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> High-Speed Wi-Fi</p>
                             <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Yoga Shala Access</p>
                             <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> On-site Restaurant & Bar</p>
-                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Secure Board Storage</p>
+                            <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Secure Gear Storage</p> <!-- UPDATED TEXT -->
                             <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Daily Housekeeping</p>
                             <p class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Local Staff Assistance</p>
                         </div>
@@ -738,11 +753,12 @@
                     <!-- END: Our Eco Commitment Section -->
 
 
-                    <!-- START: Testimonials Section -->
+                    <!-- START: Testimonials Section (UPDATED Layout) -->
                     <div id="accommodation-testimonials" class="py-20 bg-cyan-50 rounded-xl my-20">
-                        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <!-- Changed max-w-4xl to 7xl for more space -->
                             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Guest Room Experiences</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <!-- Changed grid to 3 columns on medium screens -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                                 <!-- Testimonial 1 -->
                                 <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-cyan-600">
                                     <blockquote class="text-lg text-gray-700 italic leading-relaxed">
@@ -763,8 +779,8 @@
                                         <span class="block text-sm font-normal text-gray-500">Stayed in Garden Bungalow</span>
                                     </cite>
                                 </div>
-                                <!-- Testimonial 3 (Optional) -->
-                                <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-amber-600 md:col-span-2 md:max-w-xl md:mx-auto">
+                                <!-- Testimonial 3 (Removed specific width/centering classes) -->
+                                <div class="relative bg-white p-8 rounded-xl shadow-lg border-l-4 border-amber-600">
                                     <blockquote class="text-lg text-gray-700 italic leading-relaxed">
                                         "The dorm was fantastic value! Clean, comfortable beds, secure lockers, and a great way to meet other travelers. Much nicer than your average hostel dorm. Highly recommend for solo adventurers."
                                     </blockquote>
@@ -777,6 +793,24 @@
                         </div>
                     </div>
                     <!-- END: Testimonials Section -->
+                    
+                    <!-- START: NEW Communal Areas Gallery -->
+                     <div class="py-20">
+                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Communal Spaces & Ambiance</h2>
+                             <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
+                                 <img src="https://placehold.co/300x300/818cf8/FFFFFF?text=Pool+Area" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Poolside relaxation area" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/a78bfa/FFFFFF?text=Garden+Path" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Lush garden pathway" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/f472b6/FFFFFF?text=Restaurant+View" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="View from the restaurant terrace" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/fb7185/FFFFFF?text=Yoga+Shala+Detail" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Yoga shala interior detail" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/fdba74/FFFFFF?text=Lounge+Area" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Cozy common lounge area" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/86efac/FFFFFF?text=Hammock+Spot" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Relaxing hammock spot" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/93c5fd/FFFFFF?text=Bar+Area" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Bar area with drinks" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                                 <img src="https://placehold.co/300x300/bfdbfe/FFFFFF?text=Entrance" loading="lazy" onerror="this.src='https://placehold.co/300x300/CCC/FFF?text=Space'" alt="Entrance to Eco House Mancora" class="rounded-xl shadow-md w-full h-full object-cover aspect-square">
+                             </div>
+                         </div>
+                     </div>
+                    <!-- END: NEW Communal Areas Gallery -->
 
                     <!-- START: Call to Action Section -->
                     <div class="relative py-16 bg-gradient-to-r from-cyan-700 to-teal-600 text-center rounded-xl shadow-xl overflow-hidden mt-16"> 
@@ -1492,12 +1526,13 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (UPDATED Column Layout) -->
     <footer class="bg-gray-800 text-gray-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- About -->
-                <div>
+            <!-- Changed grid from 4 cols to 6 cols, first col spans 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+                <!-- About (Now spans 2 columns on medium screens) -->
+                <div class="md:col-span-2">
                      <!-- Heading uses Poppins Bold -->
                     <h3 class="text-lg font-bold text-white mb-4">Eco House Mancora</h3>
                     <p class="text-sm">Your eco-friendly home for surf, kitesurf, and yoga in the heart of Peru's northern coast. Adventure and relaxation await.</p>
@@ -1528,7 +1563,7 @@
                     </ul>
                 </div>
                 <!-- Connect -->
-                <div>
+                <div class="md:col-span-2"> <!-- Adjusted Connect col-span slightly for balance -->
                      <!-- Heading uses Poppins Bold -->
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase mb-4">Connect</h3>
                     <ul class="space-y-2">
